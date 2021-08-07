@@ -4,17 +4,18 @@
   --primary-clr: #000;
   --secondary-clr: #f8f8f8;
   --active-clr: #f45;
+  --hover-clr: rgba(0, 0, 0, 0.04);
 }
 
 .darkTheme {
   --primary-clr: #ffebeb;
   --secondary-clr: #1d1d1d;
   --active-clr: #f45;
+  --hover-clr: rgba(0, 0, 0, 0.15);
 }
 
 .root {
   width: 100%;
-  background-color: var(--secondary-clr);
   @include fluid-size(padding-top, $mobile, $desktop, 32px, 80px);
   @include fluid-padding($mobile, $desktop, 32px, 120px);
   ::selection {

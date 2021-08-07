@@ -1,10 +1,15 @@
 import React from "react";
+
 import styles from "./app.module.scss";
+
 import Header from "./components/Header";
 import FigmaPlugins from "./components/FigmaPlugins";
+import FigmaResources from "./components/FigmaResources";
 import Articles from "./components/Articles";
 import Projects from "./components/Projects";
 import ThemeSwitcher from "./components/ThemeSwitcher/";
+
+// https://www.figma.com/api/session/state
 
 const App = () => {
   const [toggleTheme, setToggleTheme] = React.useState(
@@ -12,19 +17,16 @@ const App = () => {
   );
 
   React.useEffect(() => {
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
-        setToggleTheme(e.matches ? true : false);
-      });
-  }, []);
+    document.body.classList.add(
+      toggleTheme ? styles.darkTheme : styles.lightTheme
+    );
+    document.body.classList.remove(
+      toggleTheme ? styles.lightTheme : styles.darkTheme
+    );
+  }, [toggleTheme]);
 
   return (
-    <div
-      className={`${toggleTheme ? styles.darkTheme : styles.lightTheme} ${
-        styles.root
-      }`}
-    >
+    <div className={`${styles.root}`}>
       <main className={styles.wrap}>
         <ThemeSwitcher
           className={styles.themeSwitcher}
@@ -32,6 +34,7 @@ const App = () => {
         />
         <Header />
         <FigmaPlugins />
+        <FigmaResources />
         <Projects />
         <Articles />
       </main>
