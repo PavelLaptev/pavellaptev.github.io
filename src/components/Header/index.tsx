@@ -2,9 +2,7 @@ import * as React from "react";
 import styles from "./styles.module.scss";
 import SocialMedia from "../SocialMedia";
 
-interface Props {}
-
-const ControlDot: React.FunctionComponent<Props> = (props) => {
+const ControlDot: React.FunctionComponent = (props) => {
   return (
     <section className={styles.wrap}>
       <SocialMedia />
@@ -16,7 +14,5 @@ const ControlDot: React.FunctionComponent<Props> = (props) => {
     </section>
   );
 };
-
-ControlDot.defaultProps = {} as Partial<Props>;
 
 export default ControlDot;

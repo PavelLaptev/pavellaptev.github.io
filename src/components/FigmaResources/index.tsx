@@ -12,34 +12,49 @@ const stripHtml = (html: string) => {
 };
 
 const FigmaResources: React.FunctionComponent = () => {
-  const [resources, setResources] = React.useState([]);
+  const [alteosResources, setAlteosResources] = React.useState([]);
+
+  const setResourceObject = (resource: any) => {
+    let lastVersionData = resource.versions[Object.keys(resource.versions)[0]];
+
+    return {
+      name: lastVersionData.name,
+      likes: resource.like_count,
+      link: `https://www.figma.com/community/file/${resource.id}`,
+      downloads: resource.duplicate_count,
+      img: resource.redirect_thumbnail_url,
+      description: stripHtml(lastVersionData.description),
+    };
+  };
 
   React.useEffect(() => {
     axios
-      .get(
-        `https://api.allorigins.win/raw?url=https://www.figma.com/api/hub_files/profile/850025365157932848`
-      )
-      .then((res) => {
-        let resourcesArray = res.data.meta.map((item: any) => {
-          let lastVersionData = item.versions[Object.keys(item.versions)[0]];
+      .all([
+        axios.get(
+          `https://api.allorigins.win/raw?url=https://www.figma.com/api/hub_files/profile/134689`
+        ),
+        axios.get(
+          `https://api.allorigins.win/raw?url=https://www.figma.com/api/hub_files/profile/850025365157932848`
+        ),
+      ])
+      .then(
+        axios.spread((...responses) => {
+          let mergedArray = responses
+            .map((files: any) => files.data.meta)
+            .flat(1);
 
-          return {
-            name: lastVersionData.name,
-            likes: item.like_count,
-            link: `https://www.figma.com/community/file/${item.id}`,
-            downloads: item.duplicate_count,
-            img: item.redirect_thumbnail_url,
-            description: stripHtml(lastVersionData.description),
-          };
-        });
+          let resourceObj = mergedArray.map((item: any) => {
+            return setResourceObject(item);
+          });
 
-        setResources(resourcesArray);
-      });
+          setAlteosResources(resourceObj as any);
+        })
+      );
   }, []);
 
   return (
     <Section title="Figma resources">
-      {resources.map((resource: any, i) => {
+      {alteosResources.map((resource: any, i) => {
         return (
           <Card key={i} href={resource.link} className={styles.resource}>
             <h2 className={styles.label}>{resource.name}</h2>
