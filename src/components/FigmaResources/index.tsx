@@ -4,6 +4,11 @@ import axios from "axios";
 import Icon from "../Icon";
 import Section from "../Section";
 import Card from "../Card";
+import SkeletonCard from "../SkeletonCard";
+
+interface Props {
+  sckeletonAmount?: number;
+}
 
 const stripHtml = (html: string) => {
   let tmp = document.createElement("DIV");
@@ -11,8 +16,9 @@ const stripHtml = (html: string) => {
   return tmp.textContent || tmp.innerText || "";
 };
 
-const FigmaResources: React.FunctionComponent = () => {
-  const [alteosResources, setAlteosResources] = React.useState([]);
+const FigmaResources: React.FunctionComponent<Props> = (props) => {
+  const [resources, setResources] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const setResourceObject = (resource: any) => {
     let lastVersionData = resource.versions[Object.keys(resource.versions)[0]];
@@ -47,32 +53,41 @@ const FigmaResources: React.FunctionComponent = () => {
             return setResourceObject(item);
           });
 
-          setAlteosResources(resourceObj as any);
+          setIsLoading(false);
+          setResources(resourceObj as any);
         })
       );
   }, []);
 
   return (
     <Section title="Figma resources">
-      {alteosResources.map((resource: any, i) => {
-        return (
-          <Card key={i} href={resource.link} className={styles.resource}>
-            <h2 className={styles.label}>{resource.name}</h2>
-            <div className={styles.stat}>
-              <div className={styles.stat_item}>
-                <Icon name="downloads" />
-                <span>{resource.downloads.toLocaleString()}</span>
-              </div>
-              <div className={styles.stat_item}>
-                <Icon name="likes" />
-                <span>{resource.likes.toLocaleString()}</span>
-              </div>
-            </div>
-          </Card>
-        );
-      })}
+      {isLoading
+        ? new Array(props.sckeletonAmount).fill(0).map((_, i) => {
+            return <SkeletonCard key={i} />;
+          })
+        : resources.map((resource: any, i) => {
+            return (
+              <Card key={i} href={resource.link} className={styles.resource}>
+                <h2 className={styles.label}>{resource.name}</h2>
+                <div className={styles.stat}>
+                  <div className={styles.stat_item}>
+                    <Icon name="downloads" />
+                    <span>{resource.downloads.toLocaleString()}</span>
+                  </div>
+                  <div className={styles.stat_item}>
+                    <Icon name="likes" />
+                    <span>{resource.likes.toLocaleString()}</span>
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
     </Section>
   );
 };
+
+FigmaResources.defaultProps = {
+  sckeletonAmount: 2,
+} as Partial<Props>;
 
 export default FigmaResources;

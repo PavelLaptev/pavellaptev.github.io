@@ -1,0 +1,71 @@
+@import "../../styles/index.scss";
+
+.card {
+  pointer-events: none;
+  position: relative;
+  align-self: flex-start;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--primary-clr);
+  border-radius: 16px;
+  transition: all 0.16s ease;
+}
+
+.title {
+  height: 28px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-clr) 0%,
+    var(--secondary-clr) 50%,
+    var(--primary-clr) 100%
+  );
+  background-size: 400px 100%;
+  opacity: 0.2;
+  animation: posAnimation 4s linear infinite;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  max-width: 400px;
+  margin-top: 24px;
+  opacity: 0.1;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    height: 16px;
+    border-radius: 4px;
+    background: linear-gradient(
+      90deg,
+      var(--primary-clr) 0%,
+      var(--secondary-clr) 50%,
+      var(--primary-clr) 100%
+    );
+    background-size: 400px 100%;
+    animation: posAnimation 3.2s linear infinite;
+  }
+  &:after {
+    top: 0;
+    width: 100%;
+  }
+  &:before {
+    top: 30px;
+    width: 60%;
+  }
+}
+
+@keyframes posAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 800px 0%;
+  }
+}

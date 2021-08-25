@@ -4,9 +4,15 @@ import axios from "axios";
 import Icon from "./../Icon";
 import Section from "./../Section";
 import Card from "./../Card";
+import SkeletonCard from "../SkeletonCard";
 
-const FigmaPlugins: React.FunctionComponent = () => {
+interface Props {
+  sckeletonAmount?: number;
+}
+
+const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
   const [plugins, setPlugins] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
     axios
@@ -33,41 +39,50 @@ const FigmaPlugins: React.FunctionComponent = () => {
           };
         });
 
+        setIsLoading(false);
         setPlugins(filteredArray);
       });
   }, []);
 
   return (
     <Section title="Figma plugins">
-      {plugins.map((pluginItem: any, i) => {
-        return (
-          <Card key={i} href={pluginItem.link} className={styles.plugin}>
-            <img
-              className={styles.icon}
-              src={pluginItem.img}
-              alt="plugin icon"
-            />
+      {isLoading
+        ? new Array(props.sckeletonAmount).fill(0).map((_, i) => {
+            return <SkeletonCard key={i} />;
+          })
+        : plugins.map((pluginItem: any, i) => {
+            return (
+              <Card key={i} href={pluginItem.link} className={styles.plugin}>
+                <img
+                  className={styles.icon}
+                  src={pluginItem.img}
+                  alt="plugin icon"
+                />
 
-            <h2 className={styles.label}>{pluginItem.name}</h2>
-            <div className={styles.stat}>
-              <div className={styles.stat_item}>
-                <Icon name="downloads" />
-                <span>{pluginItem.downloads.toLocaleString()}</span>
-              </div>
-              <div className={styles.stat_item}>
-                <Icon name="likes" />
-                <span>{pluginItem.likes.toLocaleString()}</span>
-              </div>
-              <div className={styles.stat_item}>
-                <Icon name="views" />
-                <span>{pluginItem.views.toLocaleString()}</span>
-              </div>
-            </div>
-          </Card>
-        );
-      })}
+                <h2 className={styles.label}>{pluginItem.name}</h2>
+                <div className={styles.stat}>
+                  <div className={styles.stat_item}>
+                    <Icon name="downloads" />
+                    <span>{pluginItem.downloads.toLocaleString()}</span>
+                  </div>
+                  <div className={styles.stat_item}>
+                    <Icon name="likes" />
+                    <span>{pluginItem.likes.toLocaleString()}</span>
+                  </div>
+                  <div className={styles.stat_item}>
+                    <Icon name="views" />
+                    <span>{pluginItem.views.toLocaleString()}</span>
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
     </Section>
   );
 };
+
+FigmaPlugins.defaultProps = {
+  sckeletonAmount: 5,
+} as Partial<Props>;
 
 export default FigmaPlugins;
