@@ -10,53 +10,47 @@ interface Props {
   sckeletonAmount?: number;
 }
 
-const stripHtml = (html: string) => {
-  let tmp = document.createElement("DIV");
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || "";
-};
-
 const FigmaResources: React.FunctionComponent<Props> = (props) => {
-  const [resources, setResources] = React.useState([]);
+  const [resources, setResources] = React.useState([] as Array<object>);
   const [isLoading, setIsLoading] = React.useState(true);
 
-  const setResourceObject = (resource: any) => {
-    let lastVersionData = resource.versions[Object.keys(resource.versions)[0]];
+  const rootLink =
+    "https://raw.githubusercontent.com/PavelLaptev/figma-stat/gh-pages/hub_files/";
 
-    return {
-      name: lastVersionData.name,
-      likes: resource.like_count,
-      link: `https://www.figma.com/community/file/${resource.id}`,
-      downloads: resource.duplicate_count,
-      img: resource.redirect_thumbnail_url,
-      description: stripHtml(lastVersionData.description),
-    };
-  };
+  const pluginsIDs = [
+    "852545799153115753",
+    "1009207025721786443",
+    "997572063390575469",
+  ];
 
   React.useEffect(() => {
     axios
       .all([
-        axios.get(
-          `https://api.allorigins.win/raw?url=https://www.figma.com/api/hub_files/profile/134689`
+        axios.all(
+          pluginsIDs.map((id) =>
+            axios.get(`${rootLink}/${id}/counters/latest.json`)
+          )
         ),
-        axios.get(
-          `https://api.allorigins.win/raw?url=https://www.figma.com/api/hub_files/profile/850025365157932848`
+        axios.all(
+          pluginsIDs.map((id) => axios.get(`${rootLink}/${id}/info.json`))
         ),
       ])
-      .then(
-        axios.spread((...responses) => {
-          let mergedArray = responses
-            .map((files: any) => files.data.meta)
-            .flat(1);
+      .then((result) => {
+        const groupArrays = result.map((arrayGroup) =>
+          arrayGroup.map((array) => array.data)
+        );
 
-          let resourceObj = mergedArray.map((item: any) => {
-            return setResourceObject(item);
-          });
+        const mergedCounters = groupArrays[0].map((array, index) => {
+          return {
+            ...array,
+            ...groupArrays[1][index],
+          };
+        });
 
-          setIsLoading(false);
-          setResources(resourceObj as any);
-        })
-      );
+        setResources(mergedCounters);
+        setIsLoading(false);
+        console.log("resources fetched");
+      });
   }, []);
 
   return (
@@ -67,16 +61,24 @@ const FigmaResources: React.FunctionComponent<Props> = (props) => {
           })
         : resources.map((resource: any, i) => {
             return (
-              <Card key={i} href={resource.link} className={styles.resource}>
+              <Card
+                key={i}
+                href={`https://www.figma.com/community/file/${resource.id}`}
+                className={styles.resource}
+              >
                 <h2 className={styles.label}>{resource.name}</h2>
                 <div className={styles.stat}>
                   <div className={styles.stat_item}>
                     <Icon name="downloads" />
-                    <span>{resource.downloads.toLocaleString()}</span>
+                    <span>{resource.duplicateCount.toLocaleString()}</span>
                   </div>
                   <div className={styles.stat_item}>
                     <Icon name="likes" />
-                    <span>{resource.likes.toLocaleString()}</span>
+                    <span>{resource.likeCount.toLocaleString()}</span>
+                  </div>
+                  <div className={styles.stat_item}>
+                    <Icon name="views" />
+                    <span>{resource.viewCount.toLocaleString()}</span>
                   </div>
                 </div>
               </Card>

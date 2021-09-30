@@ -57,7 +57,7 @@ const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
 
         setPlugins(mergedCounters);
         setIsLoading(false);
-        console.log("fetched plugins");
+        console.log("plugins fetched");
       });
   }, []);
 
