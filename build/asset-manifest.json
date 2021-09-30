@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.854be44b.chunk.css",
+    "main.js": "/static/js/main.6adfe81e.chunk.js",
+    "main.js.map": "/static/js/main.6adfe81e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.45131da7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.45131da7.js.map",
+    "static/css/2.679831fc.chunk.css": "/static/css/2.679831fc.chunk.css",
+    "static/js/2.ae8166ea.chunk.js": "/static/js/2.ae8166ea.chunk.js",
+    "static/js/2.ae8166ea.chunk.js.map": "/static/js/2.ae8166ea.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.854be44b.chunk.css.map": "/static/css/main.854be44b.chunk.css.map",
+    "static/js/2.ae8166ea.chunk.js.LICENSE.txt": "/static/js/2.ae8166ea.chunk.js.LICENSE.txt",
+    "static/media/styles.module.scss": "/static/media/made_outer_sans_medium_personal_use-webfont.fb84cae2.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45131da7.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.ae8166ea.chunk.js",
+    "static/css/main.854be44b.chunk.css",
+    "static/js/main.6adfe81e.chunk.js"
+  ]
+}
