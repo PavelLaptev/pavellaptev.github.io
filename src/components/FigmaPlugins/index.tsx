@@ -11,36 +11,53 @@ interface Props {
 }
 
 const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
-  const [plugins, setPlugins] = React.useState([]);
+  const [plugins, setPlugins] = React.useState([] as Array<object>);
   const [isLoading, setIsLoading] = React.useState(true);
+
+  const rootLink =
+    "https://raw.githubusercontent.com/PavelLaptev/figma-stat/gh-pages/plugins/";
+
+  const pluginsIDs = [
+    "734746297902924375",
+    "789839703871161985",
+    "891448180042913164",
+    "914972720109480252",
+    "923820065156924054",
+    "939173063111899081",
+    "952189489892583044",
+    "953318991680776075",
+    "961245776147091630",
+    "981938541965949273",
+    "1000012087652644703",
+  ];
 
   React.useEffect(() => {
     axios
-      .get(
-        `https://api.allorigins.win/raw?url=https://www.figma.com/api/plugins/profile/134689`
-      )
-      .then((res) => {
-        let pluginsArray = res.data.meta
-          .sort((a: any, b: any) => {
-            return a.install_count - b.install_count;
-          })
-          .reverse();
+      .all([
+        axios.all(
+          pluginsIDs.map((id) =>
+            axios.get(`${rootLink}/${id}/counters/latest.json`)
+          )
+        ),
+        axios.all(
+          pluginsIDs.map((id) => axios.get(`${rootLink}/${id}/info.json`))
+        ),
+      ])
+      .then((result) => {
+        const groupArrays = result.map((arrayGroup) =>
+          arrayGroup.map((array) => array.data)
+        );
 
-        let filteredArray = pluginsArray.map((item: any) => {
-          let lastVersionData = item.versions[Object.keys(item.versions)[0]];
-
+        const mergedCounters = groupArrays[0].map((array, index) => {
           return {
-            link: `https://www.figma.com/community/plugin/${item.id}`,
-            name: lastVersionData.name,
-            img: `https://www.figma.com${lastVersionData.redirect_icon_url}`,
-            likes: item.like_count,
-            downloads: item.install_count,
-            views: item.view_count,
+            ...array,
+            ...groupArrays[1][index],
           };
         });
 
+        console.log(mergedCounters);
+        setPlugins(mergedCounters);
         setIsLoading(false);
-        setPlugins(filteredArray);
       });
   }, []);
 
@@ -52,10 +69,14 @@ const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
           })
         : plugins.map((pluginItem: any, i) => {
             return (
-              <Card key={i} href={pluginItem.link} className={styles.plugin}>
+              <Card
+                key={i}
+                href={`https://www.figma.com/community/plugin/${pluginItem.id}`}
+                className={styles.plugin}
+              >
                 <img
                   className={styles.icon}
-                  src={pluginItem.img}
+                  src={pluginItem.iconUrl}
                   alt="plugin icon"
                 />
 
@@ -63,15 +84,15 @@ const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
                 <div className={styles.stat}>
                   <div className={styles.stat_item}>
                     <Icon name="downloads" />
-                    <span>{pluginItem.downloads.toLocaleString()}</span>
+                    <span>{pluginItem.installCount.toLocaleString()}</span>
                   </div>
                   <div className={styles.stat_item}>
                     <Icon name="likes" />
-                    <span>{pluginItem.likes.toLocaleString()}</span>
+                    <span>{pluginItem.likeCount.toLocaleString()}</span>
                   </div>
                   <div className={styles.stat_item}>
                     <Icon name="views" />
-                    <span>{pluginItem.views.toLocaleString()}</span>
+                    <span>{pluginItem.viewCount.toLocaleString()}</span>
                   </div>
                 </div>
               </Card>
