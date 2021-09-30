@@ -48,14 +48,18 @@ const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
           arrayGroup.map((array) => array.data)
         );
 
-        const mergedCounters = groupArrays[0].map((array, index) => {
+        const mergedArrays = groupArrays[0].map((array, index) => {
           return {
             ...array,
             ...groupArrays[1][index],
           };
         });
 
-        setPlugins(mergedCounters);
+        const sortedArray = mergedArrays.sort((a: any, b: any) => {
+          return b.installCount - a.installCount;
+        });
+
+        setPlugins(sortedArray);
         setIsLoading(false);
         console.log("plugins fetched");
       });

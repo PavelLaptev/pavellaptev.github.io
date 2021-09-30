@@ -40,14 +40,18 @@ const FigmaResources: React.FunctionComponent<Props> = (props) => {
           arrayGroup.map((array) => array.data)
         );
 
-        const mergedCounters = groupArrays[0].map((array, index) => {
+        const mergedArrays = groupArrays[0].map((array, index) => {
           return {
             ...array,
             ...groupArrays[1][index],
           };
         });
 
-        setResources(mergedCounters);
+        const sortedArray = mergedArrays.sort((a: any, b: any) => {
+          return b.duplicateCount - a.duplicateCount;
+        });
+
+        setResources(sortedArray);
         setIsLoading(false);
         console.log("resources fetched");
       });
