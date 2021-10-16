@@ -35,9 +35,7 @@ const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
     axios
       .all([
         axios.all(
-          pluginsIDs.map((id) =>
-            axios.get(`${rootLink}/${id}/counters/latest.json`)
-          )
+          pluginsIDs.map((id) => axios.get(`${rootLink}/${id}/latest.json`))
         ),
         axios.all(
           pluginsIDs.map((id) => axios.get(`${rootLink}/${id}/info.json`))

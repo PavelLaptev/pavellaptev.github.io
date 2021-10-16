@@ -17,7 +17,7 @@ const FigmaResources: React.FunctionComponent<Props> = (props) => {
   const rootLink =
     "https://raw.githubusercontent.com/PavelLaptev/figma-stat/gh-pages/hub_files/";
 
-  const pluginsIDs = [
+  const filesIDs = [
     "852545799153115753",
     "1009207025721786443",
     "997572063390575469",
@@ -27,12 +27,10 @@ const FigmaResources: React.FunctionComponent<Props> = (props) => {
     axios
       .all([
         axios.all(
-          pluginsIDs.map((id) =>
-            axios.get(`${rootLink}/${id}/counters/latest.json`)
-          )
+          filesIDs.map((id) => axios.get(`${rootLink}/${id}/latest.json`))
         ),
         axios.all(
-          pluginsIDs.map((id) => axios.get(`${rootLink}/${id}/info.json`))
+          filesIDs.map((id) => axios.get(`${rootLink}/${id}/info.json`))
         ),
       ])
       .then((result) => {
