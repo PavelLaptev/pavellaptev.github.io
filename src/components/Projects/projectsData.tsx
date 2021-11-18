@@ -1,5 +1,12 @@
 const OtherProjects = [
   {
+    url: "https://pavellaptev.github.io/get-figma-stat/",
+    title: "Figma Charts",
+    text: "The daily stats about all Figma plugin, file or widget.",
+    date: "18.11.2021",
+    new: false,
+  },
+  {
     url: "https://pavellaptev.github.io/squircle-houdini-css/",
     title: "Squircle Houdini CSS module",
     text: "A lightweight CSS module for cubic-bezier squircles.",
