@@ -92,10 +92,6 @@ const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
                     <Icon name="likes" />
                     <span>{pluginItem.likeCount.toLocaleString()}</span>
                   </div>
-                  <div className={styles.stat_item}>
-                    <Icon name="views" />
-                    <span>{pluginItem.viewCount.toLocaleString()}</span>
-                  </div>
                 </div>
               </Card>
             );
