@@ -29,6 +29,7 @@ const FigmaPlugins: React.FunctionComponent<Props> = (props) => {
     "961245776147091630",
     "981938541965949273",
     "1000012087652644703",
+    "1053689497185030696",
   ];
 
   React.useEffect(() => {
