@@ -9,7 +9,7 @@ const ControlDot: React.FunctionComponent = (props) => {
       <h3 className={styles.introduction}>
         Hi! My name is <span>Pavel Laptev</span>. I'm a digital designer. Love
         design, frontend, art and architecture. Make things work, create
-        plugins, make pet-projects and write articles. Believe in opensource.
+        plugins, make pet-projects and write articles.
       </h3>
     </section>
   );
