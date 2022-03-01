@@ -12,9 +12,9 @@
   font-family: "made-outer", sans-serif;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1;
   color: var(--primary-clr);
-  @include fluid-type($mobile, $desktop, 22px, 32px);
+  @include fluid-type($mobile, $desktop, 22px, 140px);
   @include fluid-size(margin-top, $mobile, $desktop, 32px, 92px);
   @include fluid-size(margin-bottom, $mobile, $desktop, 52px, 92px);
   span {
