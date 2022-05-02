@@ -8,7 +8,7 @@ const ControlDot: React.FunctionComponent = (props) => {
       <SocialMedia />
       <div className={styles.textWrap}>
         <h1 className={styles.introduction}>
-          Against war in Ukraine. <br />{" "}
+          Against war in Ukraine. <br />{" "}
           <span
             style={{
               display: "inline-block",
