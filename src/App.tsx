@@ -12,26 +12,21 @@ import ThemeSwitcher from "./components/ThemeSwitcher/";
 // https://www.figma.com/api/session/state
 
 const App = () => {
-  const [toggleTheme, setToggleTheme] = React.useState(
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? true : false
-  );
+  // const [toggleTheme, setToggleTheme] = React.useState(
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches ? true : false
+  // );
 
   React.useEffect(() => {
-    document.body.classList.add(
-      toggleTheme ? styles.darkTheme : styles.lightTheme
-    );
-    document.body.classList.remove(
-      toggleTheme ? styles.lightTheme : styles.darkTheme
-    );
-  }, [toggleTheme]);
+    document.body.classList.add(styles.lightTheme);
+  }, []);
 
   return (
     <div className={`${styles.root}`}>
       <main className={styles.wrap}>
-        <ThemeSwitcher
+        {/* <ThemeSwitcher
           className={styles.themeSwitcher}
           onChange={() => setToggleTheme(!toggleTheme)}
-        />
+        /> */}
         <Header />
         <FigmaPlugins />
         <FigmaResources />

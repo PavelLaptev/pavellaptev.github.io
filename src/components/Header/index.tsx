@@ -6,9 +6,21 @@ const ControlDot: React.FunctionComponent = (props) => {
   return (
     <section className={styles.wrap}>
       <SocialMedia />
-      <h1 className={styles.introduction}>
-        War is Peace, Freedom is Slavery, Ignorance is Strength
-      </h1>
+      <div className={styles.textWrap}>
+        <h1 className={styles.introduction}>
+          Against war in Ukraine. <br />{" "}
+          <span
+            style={{
+              display: "inline-block",
+              backgroundColor: "var(--primary-clr)",
+              color: "#f45",
+            }}
+          >
+            {" "}
+            Against Putin.
+          </span>
+        </h1>
+      </div>
     </section>
   );
 };

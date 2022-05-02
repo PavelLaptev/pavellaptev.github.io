@@ -3,8 +3,13 @@
 .lightTheme {
   --primary-clr: #000;
   --secondary-clr: #f8f8f8;
-  --active-clr: #f45;
+  --active-clr: rgb(0, 0, 0);
   --hover-clr: rgba(0, 0, 0, 0.04);
+  --page-background: linear-gradient(
+    180deg,
+    rgba(238, 231, 174, 1) 13%,
+    rgba(143, 195, 255, 1) 26%
+  );
 }
 
 .darkTheme {
@@ -12,6 +17,11 @@
   --secondary-clr: #1d1d1d;
   --active-clr: #f45;
   --hover-clr: rgba(0, 0, 0, 0.15);
+  --page-background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 110),
+    rgb(255, 196, 0)
+  );
 }
 
 .root {

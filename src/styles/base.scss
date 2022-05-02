@@ -7,7 +7,8 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: var(--secondary-clr);
+  // background-color: var(--secondary-clr);
+
   font-family: "IBM Plex Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,5 +25,17 @@ body {
   }
   &::-webkit-scrollbar-thumb:hover {
     background: var(--active-clr);
+  }
+
+  &:after {
+    z-index: -1;
+    content: "";
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: var(--page-background);
   }
 }
