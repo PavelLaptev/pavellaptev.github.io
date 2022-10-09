@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import styles from "./styles.module.scss";
 
 interface Props {
@@ -16,9 +15,7 @@ interface Props {
 const Section: React.FC<Props> = (props) => {
   return (
     <article className={`${styles.wrap} ${props.className}`}>
-      {props.img && (
-        <Image className={styles.img} src={`/assets/${props.img}`} alt="" />
-      )}
+      {props.img && <img className={styles.img} src={`/assets/${props.img}`} />}
       {props.icon && (
         <div
           className={styles.icon}
