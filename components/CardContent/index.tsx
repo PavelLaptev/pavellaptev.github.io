@@ -10,6 +10,7 @@ interface Props {
   stat?: Array<{ name: string; value: string }> | null;
   text?: string | null;
   date?: string | null;
+  eventType?: string;
 }
 
 const Section: React.FC<Props> = (props) => {
@@ -27,7 +28,8 @@ const Section: React.FC<Props> = (props) => {
         href={props.link}
         target="_blank"
         rel="noreferrer"
-        data-splitbee-event
+        data-splitbee-event="Link Click"
+        data-splitbee-event-destination={props.link}
       >
         {props.title}
       </a>
