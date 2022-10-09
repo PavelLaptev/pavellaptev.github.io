@@ -1,0 +1,70 @@
+@import "../../styles/variables.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.caption {
+  font-family: "Inter", sans-serif;
+  color: var(--background-clr);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 8px;
+  position: absolute;
+  bottom: -20px;
+  padding: 5px 8px;
+  background-color: var(--black-clr);
+  opacity: 0;
+  height: 1px;
+  overflow: hidden;
+  transform: scaleY(0.8) scaleX(0.9) translateY(-8px);
+  transition: transform 0.2s ease, height 0.2s ease, opacity 0.1s ease-in-out;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-right: 20px;
+  border-radius: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  svg {
+    z-index: 2;
+    position: absolute;
+    transform-origin: center;
+    fill: var(--black-clr);
+    transition: transform 0.2s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border: none;
+    &::after {
+      opacity: 1;
+      transform: scale(0.9);
+    }
+
+    svg {
+      transform: translateY(-8px) scale(0.9);
+    }
+
+    .caption {
+      opacity: 1;
+      height: 25px;
+      transform: scaleY(1) translateY(-10px);
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet-m) {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+
+.wrap {
+  margin-bottom: 100px;
+
+  @media (max-width: $breakpoint-tablet-xl) {
+    margin-bottom: 60px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+
+  span {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+}
+
+.about {
+  opacity: 0.7;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.duties {
+  margin-top: 10px;
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--link-color);
+}

@@ -1,0 +1,116 @@
+@import "../../styles/variables.scss";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  min-height: 400px;
+
+  @media (max-width: $breakpoint-desktop-m) {
+    padding-top: 40px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+
+  @media (max-width: $breakpoint-desktop-xl) {
+    flex-direction: column;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+
+  @media (max-width: $breakpoint-desktop-xl) {
+    margin-bottom: 40px;
+  }
+}
+
+.social {
+  margin-right: 40px;
+
+  @media (max-width: $breakpoint-tablet-m) {
+    margin-right: 30px;
+    margin-left: -10px;
+  }
+}
+
+.themeSwitcher {
+  flex: 1 0 auto;
+}
+
+//
+
+.helloWrap {
+  display: flex;
+  width: 100%;
+}
+
+.hello {
+  display: inline-block;
+  max-width: 1500px;
+  margin-top: -30px;
+  margin-right: 60px;
+
+  @media (max-width: $breakpoint-desktop-xl) {
+    margin-right: 0;
+  }
+}
+
+.helloText {
+  display: inline;
+  font-size: 106px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+
+  @media (max-width: $breakpoint-tablet-xl) {
+    font-size: 76px;
+  }
+
+  @media (max-width: $breakpoint-tablet-l) {
+    font-size: 45px;
+  }
+}
+
+.slavaUkraini {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0;
+  margin-top: 20px;
+
+  @media (max-width: $breakpoint-tablet-xl) {
+    font-size: 36px;
+    line-height: 120%;
+  }
+
+  @media (max-width: $breakpoint-tablet-l) {
+    font-size: 24px;
+  }
+}
+
+.wavingHand {
+  width: 140px;
+  height: 128px;
+  margin: 0 -24px 0 15px;
+  transform: translateY(18px) translateX(-5px) rotate(20deg);
+  user-select: none;
+
+  @media (max-width: $breakpoint-tablet-xl) {
+    width: 100px;
+    height: 100px;
+    margin: 0 -20px 0 10px;
+  }
+
+  @media (max-width: $breakpoint-tablet-l) {
+    width: 64px;
+    height: 74px;
+    margin: 0 -15px 0 10px;
+  }
+}

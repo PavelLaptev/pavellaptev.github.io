@@ -1,0 +1,46 @@
+.wrapper {
+  position: relative;
+  height: 40px;
+  width: 54px;
+  background-color: var(--black-clr);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.sun {
+  pointer-events: none;
+  position: absolute;
+  top: 7px;
+  left: 21px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../../public/assets/sun-icon.webp");
+  background-size: cover;
+  transition: left 0.1s ease, opacity 0.1s ease;
+}
+
+.moon {
+  pointer-events: none;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../../public/assets/moon-icon.webp");
+  background-size: cover;
+  transform: translateX(15px);
+  opacity: 0;
+  transition: left 0.1s ease, opacity 0.1s ease;
+}
+
+.moonMode {
+  .moon {
+    opacity: 1;
+    left: -8px;
+  }
+
+  .sun {
+    opacity: 0;
+    left: 7px;
+  }
+}
