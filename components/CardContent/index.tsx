@@ -22,7 +22,13 @@ const Section: React.FC<Props> = (props) => {
           style={{ backgroundImage: `url(https://www.figma.com${props.icon})` }}
         />
       )}
-      <a className={"title"} href={props.link} target="_blank" rel="noreferrer">
+      <a
+        className={"title"}
+        href={props.link}
+        target="_blank"
+        rel="noreferrer"
+        data-splitbee-event
+      >
         {props.title}
       </a>
       {props.text && <p className={styles.text}>{props.text}</p>}
