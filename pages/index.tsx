@@ -13,10 +13,6 @@ import {
 } from "../sections";
 
 const Home: NextPage = () => {
-  const handleState = () => {
-    window.splitbee;
-  };
-
   return (
     <>
       <Head>
