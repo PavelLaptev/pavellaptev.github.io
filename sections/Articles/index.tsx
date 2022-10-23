@@ -4,6 +4,11 @@ import { Section, CardContent } from "../../components";
 
 const articlesData = [
   {
+    title: "Profile picture component",
+    url: "https://dev.to/pavellaptev/profile-picture-component-3mf3",
+    date: "Oct 23, 2022"
+  },
+  {
     title: "Squircles on the Web — Houdini to the rescue 🚑 🚀",
     url: "https://pavellaptev.medium.com/squircles-on-the-web-houdini-to-the-rescue-5ef11f646b72",
     date: "Apr 8, 2021"
