@@ -52,10 +52,10 @@ const Plugins: React.FC = () => {
     >
       {pluginsData.length !== 0
         ? // RENDER PLUGINS
-          pluginsData.map((plugin: any) => {
+          pluginsData.map((plugin: any, index: number) => {
             return (
               <CardContent
-                key={plugin.name}
+                key={`${plugin.name}-${index}`}
                 title={plugin.name}
                 icon={plugin.img}
                 stat={[
