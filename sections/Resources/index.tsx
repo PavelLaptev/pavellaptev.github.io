@@ -4,28 +4,28 @@ import { Section, CardContent } from "../../components";
 
 const resourcesData = [
   {
-    img: "alteos-stickers.webp",
+    img: "sources/alteos-stickers.webp",
     name: "🔖 Alteos stickers",
     likes: "117",
     copies: "2.4k",
     url: "https://www.figma.com/community/file/997572063390575469"
   },
   {
-    img: "alteos-design.webp",
+    img: "sources/alteos-design.webp",
     name: "🚀 Welcome to Alteos Design",
     likes: "77",
     copies: "698",
     url: "https://www.figma.com/community/file/852545799153115753"
   },
   {
-    img: "figma-api-list.webp",
+    img: "sources/figma-api-list.webp",
     name: "☁️ Figma API list",
     likes: "23",
     copies: "150",
     url: "https://www.figma.com/community/file/1009207025721786443"
   },
   {
-    img: "design-qa.webp",
+    img: "sources/design-qa.webp",
     name: "📐 Design QA",
     likes: "6",
     copies: "74",
