@@ -34,7 +34,15 @@ const Plugins: React.FC = () => {
           (a: any, b: any) => b.runs - a.runs
         );
 
-        setPluginsData(resortedPluginData);
+        // exclude cloned plugin
+        const clonedPlugins = ["1050439261870735490", "1052604096433126717"];
+
+        // remove plugin with id 1050439261870735490
+        const removeClonedPlugin = resortedPluginData.filter(
+          (plugin: any) => !clonedPlugins.includes(plugin.url.split("/").pop())
+        );
+
+        setPluginsData(removeClonedPlugin);
       });
   }, []);
 
