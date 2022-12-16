@@ -13,7 +13,7 @@ const Plugins: React.FC = () => {
       "https://www.figma.com/api/plugins/profile/134689?fuid=987658461863261647";
 
     // cors proxy
-    const proxyUrl = "https://secure-thicket-88117.herokuapp.com/";
+    const proxyUrl = "https://fuckcors.app/";
 
     fetch(proxyUrl + fetchUrl)
       .then((response) => response.json())
