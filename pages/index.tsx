@@ -25,6 +25,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Pavel Laptev — digital designer" />
         <script async src="https://cdn.splitbee.io/sb.js"></script>
+        <script async src="//static.getclicky.com/101391025.js"></script>
       </Head>
 
       <main className={styles.main}>
