@@ -25,8 +25,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/ico-192.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Pavel Laptev — digital designer" />
-
-        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
 
       <main className={styles.main}>
@@ -37,6 +35,25 @@ const Home: NextPage = () => {
         <Articles />
         <Experience />
       </main>
+
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-V9JL9S50VR"
+      />
+
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-V9JL9S50VR');
+`
+        }}
+      />
     </>
   );
 };
