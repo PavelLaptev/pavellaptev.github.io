@@ -16,13 +16,6 @@ interface Props {
 const Section: React.FC<Props> = (props) => {
   return (
     <article className={`${styles.wrap} ${props.className}`}>
-      {props.img && <img className={styles.img} src={`/assets/${props.img}`} />}
-      {props.icon && (
-        <div
-          className={styles.icon}
-          style={{ backgroundImage: `url(https://www.figma.com${props.icon})` }}
-        />
-      )}
       <a
         className={"title"}
         href={props.link}
@@ -31,7 +24,18 @@ const Section: React.FC<Props> = (props) => {
         data-splitbee-event="Link Click"
         data-splitbee-event-destination={props.link}
       >
-        {props.title}
+        {props.img && (
+          <img className={styles.img} src={`/assets/${props.img}`} />
+        )}
+        {props.icon && (
+          <div
+            className={styles.icon}
+            style={{
+              backgroundImage: `url(https://www.figma.com${props.icon})`
+            }}
+          />
+        )}
+        <h3 className={"title"}>{props.title}</h3>
       </a>
       {props.text && <p className={styles.text}>{props.text}</p>}
       <ul className={styles.stat}>

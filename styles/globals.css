@@ -72,6 +72,10 @@ a:hover {
   display: none;
 }
 
+a {
+  cursor: pointer;
+}
+
 .title {
   width: fit-content;
   font-size: 24px;
