@@ -4,6 +4,13 @@ import { Section, CardContent } from "../../components";
 
 const petsData = [
   {
+    img: "pets/berlin-brutalism.webp",
+    url: "https://pavellaptev.github.io/berlin-brutalism",
+    title: "BERLIN BRUTALISM",
+    text: "Explore 3D models of Berlin's brutalist buildings and learn about the history and significance of brutalism in Berlin. ",
+    date: "18.12.2022"
+  },
+  {
     img: "pets/squircle-pet.webp",
     url: "https://pavellaptev.github.io/squircle-houdini-css/",
     title: "Squircle Houdini CSS module",
