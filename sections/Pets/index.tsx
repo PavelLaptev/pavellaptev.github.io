@@ -7,8 +7,15 @@ const petsData = [
     img: "pets/berlin-brutalism.webp",
     url: "https://pavellaptev.github.io/berlin-brutalism",
     title: "BERLIN BRUTALISM",
-    text: "Explore 3D models of Berlin's brutalist buildings and learn about the history and significance of brutalism in Berlin. ",
+    text: "Explore 3D models of Berlin's brutalist buildings and learn about the history and significance of brutalism in Berlin.",
     date: "18.12.2022"
+  },
+  {
+    img: "pets/figma-plugin-boilerplate-pet.webp",
+    url: "https://github.com/PavelLaptev/figma-plugin-react-boilerplate",
+    title: "React Boilerplate for Figma plugins ⚛️",
+    text: "React-based template for creating Figma plugins using TypeScript, SASS with the latest react and Figma APIs",
+    date: "04.03.2022"
   },
   {
     img: "pets/squircle-pet.webp",
@@ -29,14 +36,14 @@ const petsData = [
     url: "https://pavellaptev.github.io/context-cursor/",
     title: "Context Cursor",
     text: "A cursor that takes the shape of the hovered element. Inspired by iPad pointer.",
-    date: null
+    date: "11.08.2020"
   },
   {
     img: "pets/warp-svg-online-pet.webp",
     url: "https://pavellaptev.github.io/warp-svg/",
     title: "Warp SVG Online!",
     text: "A simple online tool that allows you to warp, bend, and distort SVG files.",
-    date: null
+    date: "15.10.2020"
   },
   {
     img: "pets/dark-ages-pet.webp",
