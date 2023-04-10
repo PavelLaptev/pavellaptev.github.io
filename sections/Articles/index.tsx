@@ -4,6 +4,11 @@ import { Section, CardContent } from "../../components";
 
 const articlesData = [
   {
+    title: "Simple grid system with subgrid classes",
+    url: "https://dev.to/pavellaptev/simple-grid-system-with-subgrid-classes-2f44",
+    date: "Apr 10, 2023"
+  },
+  {
     title: "Profile picture component",
     url: "https://dev.to/pavellaptev/profile-picture-component-3mf3",
     date: "Oct 23, 2022"
