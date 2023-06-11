@@ -4,6 +4,13 @@ import { Section, CardContent } from "../../components";
 
 const petsData = [
   {
+    img: "pets/farbtonemacher-pet.webp",
+    url: "https://pavellaptev.github.io/farbtonmacher?mainColor=%2336EAA9&steps=4&dsb=0&dss=0&dst=0&lsb=0&lss=0&lst=0",
+    title: "Farbtonmacher",
+    text: "Farbtonemacher is a tool that helps you to generate color shades based on your main color.",
+    date: "11.06.2023"
+  },
+  {
     img: "pets/berlin-brutalism.webp",
     url: "https://pavellaptev.github.io/berlin-brutalism",
     title: "BERLIN BRUTALISM",

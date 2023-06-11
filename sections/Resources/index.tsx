@@ -30,6 +30,13 @@ const resourcesData = [
     likes: "6",
     copies: "74",
     url: "https://www.figma.com/community/file/1120486617280312367"
+  },
+  {
+    img: "sources/gpt-figma-res.webp",
+    name: "Chat GPT & Figma. Friends of Figma, Berlin",
+    likes: "1",
+    copies: "17",
+    url: "https://www.figma.com/community/file/1245726304628636662"
   }
 ];
 
