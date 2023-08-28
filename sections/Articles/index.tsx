@@ -4,6 +4,11 @@ import { Section, CardContent } from "../../components";
 
 const articlesData = [
   {
+    title: "Design Systems Entropy",
+    url: "https://dev.to/pavellaptev/design-systems-entropy-4008",
+    date: "Aug 23, 2023"
+  },
+  {
     title: "Simple grid system with subgrid classes",
     url: "https://dev.to/pavellaptev/simple-grid-system-with-subgrid-classes-2f44",
     date: "Apr 10, 2023"
