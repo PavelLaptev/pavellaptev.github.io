@@ -1,6 +1,4 @@
 <script lang="ts">
-  import AnimatedLink from "./AnimatedLink.svelte";
-
   type Pet = {
     title: string;
     text: string;
@@ -134,7 +132,7 @@
         rel="noopener noreferrer"
         class="link-card"
       >
-        <AnimatedLink text={pet.title} />
+        <h3 class="card-title">{pet.title}</h3>
         <p class="card-text">{pet.text}</p>
       </a>
     {/each}

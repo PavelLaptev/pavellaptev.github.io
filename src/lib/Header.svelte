@@ -30,12 +30,7 @@
 <header>
   <nav>
     {#each links as link}
-      <a
-        href={link.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="link-base"
-      >
+      <a href={link.url} target="_blank" rel="noopener noreferrer">
         {link.name}
       </a>
     {/each}
@@ -63,7 +58,17 @@
   a {
     color: var(--color-primary);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
   }
 
   .theme-toggle {

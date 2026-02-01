@@ -23,37 +23,29 @@
 }
 
 /* Global link and card styles */
-.link-base {
-  text-decoration: none;
-  position: relative;
-  display: inline;
-  transition: color 0.2s ease;
-  padding: 2px 4px;
-  background: linear-gradient(
-    to right,
-    var(--color-accent) 0%,
-    var(--color-accent) 100%
-  );
-  background-size: 0% 100%;
-  background-repeat: no-repeat;
-  background-position: left center;
-  transition:
-    background-size 0.3s ease,
-    color 0.2s ease;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
-.link-base:hover {
-  background-size: 100% 100%;
-  color: white;
-}
-
 .link-card {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 8px;
+  line-height: 1.5;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1.4px;
+  text-underline-offset: 3px;
+}
+
+.link-card:hover .card-title {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
 }
 
 .link-card:hover .card-text,

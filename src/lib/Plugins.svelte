@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import AnimatedLink from "./AnimatedLink.svelte";
 
   type Plugin = {
     name: string;
@@ -61,7 +60,7 @@
         rel="noopener noreferrer"
         class="link-card"
       >
-        <AnimatedLink text={plugin.name} />
+        <h3 class="card-title">{plugin.name}</h3>
         <div class="card-meta">
           <span>{plugin.runsShort} installs</span>
           <span>∙</span>

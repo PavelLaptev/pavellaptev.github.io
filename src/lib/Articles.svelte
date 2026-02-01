@@ -1,6 +1,4 @@
 <script lang="ts">
-  import AnimatedLink from "./AnimatedLink.svelte";
-
   type Article = {
     title: string;
     url: string;
@@ -190,7 +188,7 @@
         rel="noopener noreferrer"
         class="link-card"
       >
-        <AnimatedLink text={article.title} />
+        <h3 class="card-title">{article.title}</h3>
         <span class="card-text">{article.date}</span>
       </a>
     {/each}
