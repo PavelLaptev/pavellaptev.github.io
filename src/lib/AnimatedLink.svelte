@@ -77,11 +77,10 @@
   .animated-title {
     font-size: 16px;
     font-weight: 500;
-    text-wrap: balance;
     margin: 0 0 8px 0;
     line-height: 1.05;
     color: var(--color-primary);
-    transition: color 0.2s ease;
+    transition: color 0.1s ease;
   }
 
   :global(.line-bg) {
