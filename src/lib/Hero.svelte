@@ -164,6 +164,7 @@
     line-height: 1.3;
     margin: 0;
     color: var(--color-primary);
+    text-wrap: balance;
   }
 
   .greeting {
