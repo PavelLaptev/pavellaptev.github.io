@@ -115,8 +115,8 @@
   <h1>
     <span class="greeting" on:click={changeGreeting}>{randomGreeting}</span>
     <img src="/assets/ava.png" alt="Pavel's avatar" class="avatar" /> I'm Pavel,
-    a digital designer based in Berlin. Love design, open source and contribute to
-    community.
+    a digital designer based in Berlin. I love design, open source, and contributing
+    to the community.
   </h1>
 </section>
 
