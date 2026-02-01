@@ -130,19 +130,17 @@
   }
 
   onMount(async () => {
-    // Initialize with a random greeting
-    randomGreeting = getGreeting(null);
-
     // Fetch user's country from IP
     try {
-      const response = await fetch("https://ipapi.co/json/");
+      const response = await fetch("/location.json");
       const data = await response.json();
       userCountry = data.country_code;
-      // Update greeting based on country
-      randomGreeting = getGreeting(userCountry);
     } catch (error) {
       console.log("Could not detect location, using random greeting");
     }
+
+    // Set greeting after location fetch (whether it succeeded or failed)
+    randomGreeting = getGreeting(userCountry);
   });
 </script>
 

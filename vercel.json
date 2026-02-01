@@ -3,12 +3,20 @@
     "api/plugins.js": {
       "memory": 128,
       "maxDuration": 10
+    },
+    "api/location.js": {
+      "memory": 128,
+      "maxDuration": 10
     }
   },
   "rewrites": [
     {
       "source": "/api/plugins",
       "destination": "/api/plugins.js"
+    },
+    {
+      "source": "/api/location",
+      "destination": "/api/location.js"
     }
   ]
 }
