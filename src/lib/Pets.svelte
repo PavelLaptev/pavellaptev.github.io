@@ -38,7 +38,7 @@
     },
     {
       url: "https://github.com/PavelLaptev/figma-plugin-react-boilerplate",
-      title: "React Boilerplate for Figma plugins ⚛️",
+      title: "React Boilerplate Figma plugin",
       text: "React-based template for creating Figma plugins using TypeScript, SASS with the latest react and Figma APIs",
       date: "04.03.2022",
       image: "/assets/pets/figma-plugin-boilerplate-pet.webp"
