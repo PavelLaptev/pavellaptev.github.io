@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "api/plugins.js": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/plugins",
+      "destination": "/api/plugins.js"
+    }
+  ]
+}

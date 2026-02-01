@@ -1,0 +1,27 @@
+name: Update Figma Plugins Data
+
+on:
+  schedule:
+    # Run every day at 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-plugins:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Figma plugins data
+        run: |
+          curl -s "https://www.figma.com/api/plugins/profile/134689?fuid=987658461863261647" \
+            -H "User-Agent: Mozilla/5.0" \
+            -o public/plugins.json
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/plugins.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update Figma plugins data" && git push)
