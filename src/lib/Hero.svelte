@@ -25,36 +25,18 @@
     },
     { text: "Howdy!", language: "English", countries: ["US"] },
     { text: "Hallo!", language: "German", countries: ["DE", "AT", "CH", "LI"] },
-    {
-      text: "Guten Tag!",
-      language: "German",
-      countries: ["DE", "AT", "CH", "LI"]
-    },
     { text: "Moin!", language: "German", countries: ["DE"] },
     { text: "Servus!", language: "German", countries: ["DE", "AT"] },
     { text: "Привет!", language: "Russian", countries: ["RU", "BY", "KZ"] },
-    {
-      text: "Здравствуйте!",
-      language: "Russian",
-      countries: ["RU", "BY", "KZ"]
-    },
     {
       text: "¡Hola!",
       language: "Spanish",
       countries: ["ES", "MX", "AR", "CO", "CL", "PE", "VE"]
     },
     { text: "¡Qué tal!", language: "Spanish", countries: ["ES", "MX", "AR"] },
-    {
-      text: "Bonjour!",
-      language: "French",
-      countries: ["FR", "BE", "CH", "CA", "LU"]
-    },
     { text: "Salut!", language: "French", countries: ["FR", "BE", "CH", "CA"] },
     { text: "Ciao!", language: "Italian", countries: ["IT", "CH", "SM"] },
-    { text: "Salve!", language: "Italian", countries: ["IT"] },
-    { text: "こんにちは!", language: "Japanese", countries: ["JP"] },
     { text: "やあ!", language: "Japanese", countries: ["JP"] },
-    { text: "안녕하세요!", language: "Korean", countries: ["KR"] },
     { text: "안녕!", language: "Korean", countries: ["KR"] },
     {
       text: "Olá!",
@@ -64,30 +46,16 @@
     { text: "Oi!", language: "Portuguese", countries: ["BR"] },
     { text: "Hej!", language: "Swedish", countries: ["SE", "DK", "NO"] },
     { text: "Hei!", language: "Norwegian", countries: ["NO"] },
-    { text: "你好!", language: "Chinese", countries: ["CN", "TW", "SG"] },
     { text: "嗨!", language: "Chinese", countries: ["CN", "TW"] },
-    {
-      text: "مرحبا!",
-      language: "Arabic",
-      countries: ["SA", "AE", "EG", "IQ", "JO", "LB", "SY"]
-    },
     { text: "أهلا!", language: "Arabic", countries: ["SA", "AE", "EG"] },
     { text: "Merhaba!", language: "Turkish", countries: ["TR"] },
     { text: "Selam!", language: "Turkish", countries: ["TR"] },
-    { text: "Γεια σου!", language: "Greek", countries: ["GR", "CY"] },
     { text: "Γεια!", language: "Greek", countries: ["GR", "CY"] },
     { text: "Привіт!", language: "Ukrainian", countries: ["UA"] },
-    { text: "Вітаю!", language: "Ukrainian", countries: ["UA"] },
     { text: "Cześć!", language: "Polish", countries: ["PL"] },
-    { text: "Dzień dobry!", language: "Polish", countries: ["PL"] },
     { text: "Ahoj!", language: "Czech", countries: ["CZ", "SK"] },
     { text: "Nazdar!", language: "Czech", countries: ["CZ"] },
     { text: "Hoi!", language: "Dutch", countries: ["NL", "BE"] },
-    { text: "Hallo!", language: "Dutch", countries: ["NL", "BE"] },
-    { text: "Namaste!", language: "Hindi", countries: ["IN", "NP"] },
-    { text: "नमस्ते!", language: "Hindi", countries: ["IN", "NP"] },
-    { text: "Hej!", language: "Danish", countries: ["DK"] },
-    { text: "Goddag!", language: "Danish", countries: ["DK"] },
     { text: "Terve!", language: "Finnish", countries: ["FI"] },
     { text: "Moi!", language: "Finnish", countries: ["FI"] },
     { text: "Szia!", language: "Hungarian", countries: ["HU"] },
@@ -95,14 +63,14 @@
     { text: "Shalom!", language: "Hebrew", countries: ["IL"] },
     { text: "שלום!", language: "Hebrew", countries: ["IL"] },
     { text: "สวัสดี!", language: "Thai", countries: ["TH"] },
-    { text: "Xin chào!", language: "Vietnamese", countries: ["VN"] },
     { text: "Kumusta!", language: "Tagalog", countries: ["PH"] },
     { text: "Halo!", language: "Indonesian", countries: ["ID"] },
     { text: "Helo!", language: "Welsh", countries: ["GB"] }
   ];
 
   let userCountry: string | null = null;
-  let randomGreeting = "";
+  let randomGreeting =
+    greetings[Math.floor(Math.random() * greetings.length)].text;
 
   function getGreeting(country: string | null): string {
     // If we have a country, prioritize greetings from that country (70% chance)
@@ -130,17 +98,16 @@
   }
 
   onMount(async () => {
-    // Fetch user's country from IP
+    // Fetch user's country from IP in the background
     try {
       const response = await fetch("/location.json");
       const data = await response.json();
       userCountry = data.country_code;
+      // Update greeting based on location
+      randomGreeting = getGreeting(userCountry);
     } catch (error) {
-      console.log("Could not detect location, using random greeting");
+      console.log("Could not detect location, keeping random greeting");
     }
-
-    // Set greeting after location fetch (whether it succeeded or failed)
-    randomGreeting = getGreeting(userCountry);
   });
 </script>
 
