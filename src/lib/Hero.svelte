@@ -100,7 +100,7 @@
   onMount(async () => {
     // Fetch user's country from IP in the background
     try {
-      const response = await fetch("/location.json");
+      const response = await fetch("/api/location");
       const data = await response.json();
       userCountry = data.country_code;
       // Update greeting based on location
