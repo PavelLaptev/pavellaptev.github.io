@@ -1,6 +1,8 @@
 name: Update Figma Plugins Data
 
 on:
+  push:
+    branches: [main]
   schedule:
     # Run every day at 00:00 UTC
     - cron: "0 0 * * *"
@@ -18,9 +20,21 @@ jobs:
 
       - name: Fetch Figma plugins data
         run: |
-          curl -s "https://www.figma.com/api/plugins/profile/134689?fuid=987658461863261647" \
-            -H "User-Agent: Mozilla/5.0" \
-            -o public/plugins.json
+          curl -s "https://www.figma.com/api/plugins/profile/134689" \
+            -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Accept: application/json" \
+            -H "Referer: https://www.figma.com/" \
+            -o /tmp/plugins_response.json
+
+      - name: Validate and update plugins data
+        run: |
+          if python3 -c "import json; json.load(open('/tmp/plugins_response.json'))" 2>/dev/null; then
+            echo "Valid JSON response, updating plugins.json"
+            cp /tmp/plugins_response.json public/plugins.json
+          else
+            echo "::warning::Figma API did not return valid JSON. Skipping update."
+            exit 0
+          fi
 
       - name: Commit and push if changed
         run: |
