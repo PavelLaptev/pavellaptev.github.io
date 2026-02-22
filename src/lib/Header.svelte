@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-
   const links = [
     { name: "GitHub", url: "https://github.com/PavelLaptev" },
     { name: "Figma", url: "https://www.figma.com/@pavellaptev" },
@@ -11,20 +9,51 @@
     { name: "Linkedin", url: "https://www.linkedin.com/in/pavel-laptev/" }
   ];
 
-  let theme = "light";
+  type Theme = "light" | "dark" | "system";
+  let theme = $state<Theme>("system");
 
-  onMount(() => {
-    // Check for saved theme preference or default to 'light'
-    const savedTheme = localStorage.getItem("theme") || "light";
-    theme = savedTheme;
-    document.documentElement.setAttribute("data-theme", theme);
+  function getSystemTheme() {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
+
+  function applyTheme(t: Theme) {
+    theme = t;
+    const resolved = t === "system" ? getSystemTheme() : t;
+    document.documentElement.setAttribute("data-theme", resolved);
+  }
+
+  $effect(() => {
+    const savedTheme =
+      (localStorage.getItem("theme") as Theme | null) ?? "system";
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    applyTheme(savedTheme);
+
+    const handler = () => {
+      if (theme === "system") applyTheme("system");
+    };
+    systemDark.addEventListener("change", handler);
+    return () => systemDark.removeEventListener("change", handler);
   });
 
   function toggleTheme() {
-    theme = theme === "light" ? "dark" : "light";
-    localStorage.setItem("theme", theme);
-    document.documentElement.setAttribute("data-theme", theme);
+    const next: Theme =
+      theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
+    if (next === "system") {
+      localStorage.removeItem("theme");
+    } else {
+      localStorage.setItem("theme", next);
+    }
+    applyTheme(next);
   }
+
+  const themeEmoji: Record<Theme, string> = {
+    light: "🌞",
+    dark: "🌚",
+    system: "🌓"
+  };
 </script>
 
 <header>
@@ -36,8 +65,8 @@
     {/each}
   </nav>
 
-  <button on:click={toggleTheme} class="theme-toggle" aria-label="Toggle theme">
-    {theme === "light" ? "🌚" : "🌞"}
+  <button onclick={toggleTheme} class="theme-toggle" aria-label="Toggle theme">
+    {themeEmoji[theme]}
   </button>
 </header>
 

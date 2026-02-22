@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-
   interface Greeting {
     text: string;
     language: string;
@@ -68,9 +66,10 @@
     { text: "Helo!", language: "Welsh", countries: ["GB"] }
   ];
 
-  let userCountry: string | null = null;
-  let randomGreeting =
-    greetings[Math.floor(Math.random() * greetings.length)].text;
+  let userCountry = $state<string | null>(null);
+  let randomGreeting = $state(
+    greetings[Math.floor(Math.random() * greetings.length)].text
+  );
 
   function getGreeting(country: string | null): string {
     // If we have a country, prioritize greetings from that country (70% chance)
@@ -97,23 +96,25 @@
     }
   }
 
-  onMount(async () => {
+  $effect(() => {
     // Fetch user's country from IP in the background
-    try {
-      const response = await fetch("/api/location");
-      const data = await response.json();
-      userCountry = data.country_code;
-      // Update greeting based on location
-      randomGreeting = getGreeting(userCountry);
-    } catch (error) {
-      console.log("Could not detect location, keeping random greeting");
-    }
+    (async () => {
+      try {
+        const response = await fetch("/api/location");
+        const data = await response.json();
+        userCountry = data.country_code;
+        // Update greeting based on location
+        randomGreeting = getGreeting(userCountry);
+      } catch (error) {
+        console.log("Could not detect location, keeping random greeting");
+      }
+    })();
   });
 </script>
 
 <section class="hero">
   <h1>
-    <span class="greeting" on:click={changeGreeting}>{randomGreeting}</span>
+    <span class="greeting" onclick={changeGreeting}>{randomGreeting}</span>
     <img src="/assets/ava.png" alt="Pavel's avatar" class="avatar" /> I'm Pavel,
     a digital designer based in Berlin. I love design, open source, and contributing
     to the community.

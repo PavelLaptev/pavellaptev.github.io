@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import { fetchIssues } from "./digestUtils";
   import { link } from "svelte-spa-router";
 
@@ -12,8 +11,10 @@
   };
   let issues = $state<IndexEntry[]>([]);
 
-  onMount(async () => {
-    issues = await fetchIssues();
+  $effect(() => {
+    (async () => {
+      issues = await fetchIssues();
+    })();
   });
 </script>
 

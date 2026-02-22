@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import { fetchIssue, type DigestIssue } from "./digestUtils";
   import { link } from "svelte-spa-router";
 
@@ -7,10 +6,12 @@
 
   let issue = $state<DigestIssue | null>(null);
 
-  onMount(async () => {
-    if (params.slug) {
-      issue = await fetchIssue(params.slug);
-    }
+  $effect(() => {
+    (async () => {
+      if (params.slug) {
+        issue = await fetchIssue(params.slug);
+      }
+    })();
   });
 </script>
 
