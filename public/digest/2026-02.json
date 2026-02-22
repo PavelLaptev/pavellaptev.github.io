@@ -1,0 +1,89 @@
+{
+  "slug": "2026-02",
+  "number": 1,
+  "title": "Dial Up the Vibes",
+  "date": "2026-02-01",
+  "description": "Design tools, web standards, open source curiosities, and a couple of rabbit holes worth falling into.",
+  "sections": [
+    {
+      "title": "Design",
+      "links": [
+        {
+          "title": "Inspo",
+          "url": "https://www.inspo.page",
+          "description": "A curated library of well-crafted website components and sections, organized by element type and interaction pattern — updated weekly."
+        },
+        {
+          "title": "Detail.design",
+          "url": "https://detail.design/",
+          "description": "A collection of small UI details and interactions that make a big difference, curated by Rene Wang."
+        },
+        {
+          "title": "Design System Cookbooks",
+          "url": "https://www.designsystemcookbooks.com",
+          "description": "The biggest searchable collection of design systems from companies around the world, organized by industry and features."
+        },
+        {
+          "title": "AI Design Library",
+          "url": "https://library.aidesign.guide",
+          "description": "Practical guides, prompting techniques, and curated resources for integrating AI into a design workflow — built by Romina Kavcic."
+        },
+        {
+          "title": "Zed Theme Builder",
+          "url": "https://zed.dev/blog/theme-builder",
+          "description": "Zed's new visual theme editor lets you craft editor themes with a live preview and an inspector that shows exactly which token controls each UI element."
+        },
+        {
+          "title": "Variant Community",
+          "url": "https://variant.com/community",
+          "description": "Variant's community space for product designers and developers to connect, share, and learn."
+        }
+      ]
+    },
+    {
+      "title": "Web & Accessibility",
+      "links": [
+        {
+          "title": "You might not need role=\"presentation\"",
+          "url": "https://piccalil.li/blog/you-might-not-need-rolepresentation",
+          "description": "A deep dive into the actual use cases for role=\"presentation\", with real-world examples of how it's commonly misused and what to do instead."
+        },
+        {
+          "title": "Interop 2026 Dashboard",
+          "url": "https://wpt.fyi/interop-2026",
+          "description": "Live cross-browser test scores tracking the 2026 interoperability effort across 26 CSS, HTML, and Web API focus areas."
+        }
+      ]
+    },
+    {
+      "title": "Tools & Open Source",
+      "links": [
+        {
+          "title": "OSS Insight",
+          "url": "https://ossinsight.io",
+          "description": "Real-time analytics and deep insights into GitHub activity — trending repos, star history, contributor stats, and more, powered by TiDB."
+        },
+        {
+          "title": "Gboard Dial Version",
+          "url": "https://kbd.news/Gboard-Dial-Version-2734.html",
+          "description": "Google Japan's yearly tradition strikes again: a fully open-source dial-based keyboard where you spin stepper motors to type — no keyswitches required."
+        }
+      ]
+    },
+    {
+      "title": "Rabbit Hole",
+      "links": [
+        {
+          "title": "Terror Vision",
+          "url": "https://www.terror-vision.com",
+          "description": "A cult label releasing horror soundtracks on vinyl, cassette, and Blu-ray — if you've ever wanted the Ghoulies OST on tape, this is the place."
+        },
+        {
+          "title": "The Infinite Conversation",
+          "url": "https://www.infiniteconversation.com",
+          "description": "An AI-generated, never-ending dialogue between Werner Herzog and Slavoj Žižek — everything you hear is a machine hallucination."
+        }
+      ]
+    }
+  ]
+}
