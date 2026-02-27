@@ -15,49 +15,51 @@
   });
 </script>
 
-<main>
-  <nav class="breadcrumb">
-    <a href="/" use:link>← Back</a>
-  </nav>
+<div class="page">
+  <main>
+    <nav class="breadcrumb">
+      <a href="/" use:link>← Back</a>
+    </nav>
 
-  {#if issue}
-    <article>
-      <h1 class="page-title">#{issue.number} — {issue.title}</h1>
-      {#if issue.description}
-        <p class="issue-description">
-          {new Date(issue.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long"
-          })}. {issue.description}
-        </p>
-      {/if}
-      {#each issue.sections as section}
-        <div class="digest-section">
-          <h2 class="section-label">{section.title}</h2>
-          <ul class="links-grid">
-            {#each section.links as item}
-              <li>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link-card"
-                >
-                  <h3 class="card-title">{item.title}</h3>
-                  {#if item.description}
-                    <p class="card-text">{item.description}</p>
-                  {/if}
-                </a>
-              </li>
-            {/each}
-          </ul>
-        </div>
-      {/each}
-    </article>
-  {:else}
-    <p>Issue not found.</p>
-  {/if}
-</main>
+    {#if issue}
+      <article>
+        <h1 class="page-title">#{issue.number} — {issue.title}</h1>
+        {#if issue.description}
+          <p class="issue-description">
+            {new Date(issue.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long"
+            })}. {issue.description}
+          </p>
+        {/if}
+        {#each issue.sections as section}
+          <div class="digest-section">
+            <h2 class="section-label">{section.title}</h2>
+            <ul class="links-grid">
+              {#each section.links as item}
+                <li>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link-card"
+                  >
+                    <h3 class="card-title">{item.title}</h3>
+                    {#if item.description}
+                      <p class="card-text">{item.description}</p>
+                    {/if}
+                  </a>
+                </li>
+              {/each}
+            </ul>
+          </div>
+        {/each}
+      </article>
+    {:else}
+      <p>Issue not found.</p>
+    {/if}
+  </main>
+</div>
 
 <style>
   .breadcrumb {

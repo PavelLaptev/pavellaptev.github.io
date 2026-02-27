@@ -7,11 +7,13 @@
   import Digest from "./Digest.svelte";
 </script>
 
-<main>
+<div class="page">
   <Header />
-  <Hero />
-  <Plugins />
-  <Pets />
-  <Articles />
-  <Digest />
-</main>
+  <main>
+    <Hero />
+    <Plugins />
+    <Pets />
+    <Articles />
+    <Digest />
+  </main>
+</div>
