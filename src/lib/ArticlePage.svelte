@@ -102,14 +102,14 @@
   }
 
   .article-content :global(code) {
-    background: rgba(0, 0, 0, 0.06);
+    background: var(--color-code-bg);
     padding: 2px 6px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 88%;
   }
 
   .article-content :global(pre) {
-    background: rgba(0, 0, 0, 0.06);
+    background: var(--color-code-bg);
     padding: 16px;
     border-radius: 8px;
     overflow-x: auto;
@@ -119,7 +119,7 @@
   .article-content :global(pre code) {
     background: none;
     padding: 0;
-    font-size: 14px;
+    font-size: 88%;
     line-height: 1.6;
   }
 
@@ -135,9 +135,14 @@
 
   .article-content :global(blockquote) {
     border-left: 3px solid var(--color-accent);
+    background: var(--color-code-bg);
     margin: 0 0 24px;
     padding: 8px 16px;
     color: var(--color-secondary);
+  }
+
+  .article-content :global(blockquote p:last-child) {
+    margin-bottom: 0;
   }
 
   .article-content :global(img) {

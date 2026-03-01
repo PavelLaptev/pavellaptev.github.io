@@ -74,7 +74,9 @@
   header {
     margin-bottom: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    /* justify-content: space-between; */
+    gap: 32px;
     align-items: flex-start;
   }
 
@@ -123,7 +125,8 @@
       margin-bottom: 40px;
     }
 
-    nav {
+    nav,
+    header {
       gap: 24px;
     }
 
