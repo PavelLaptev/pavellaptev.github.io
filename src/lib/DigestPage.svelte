@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fetchIssue, type DigestIssue } from "./digestUtils";
+  import { getDigestIssue, type DigestIssue } from "./contentUtils";
   import { link } from "svelte-spa-router";
 
   const { params } = $props<{ params: { slug?: string } }>();
@@ -7,11 +7,9 @@
   let issue = $state<DigestIssue | null>(null);
 
   $effect(() => {
-    (async () => {
-      if (params.slug) {
-        issue = await fetchIssue(params.slug);
-      }
-    })();
+    if (params.slug) {
+      issue = getDigestIssue(params.slug);
+    }
   });
 </script>
 

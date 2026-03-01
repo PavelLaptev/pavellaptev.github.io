@@ -1,21 +1,8 @@
 <script lang="ts">
-  import { fetchIssues } from "./digestUtils";
+  import { getDigestIssues } from "./contentUtils";
   import { link } from "svelte-spa-router";
 
-  type IndexEntry = {
-    slug: string;
-    number: number;
-    title: string;
-    date: string;
-    description?: string;
-  };
-  let issues = $state<IndexEntry[]>([]);
-
-  $effect(() => {
-    (async () => {
-      issues = await fetchIssues();
-    })();
-  });
+  const issues = getDigestIssues();
 </script>
 
 <section class="section">
