@@ -61,7 +61,7 @@ body {
 .card-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   line-height: 1.5;
   color: var(--color-primary);
   text-decoration: underline;
@@ -100,10 +100,15 @@ body {
   row-gap: 24px;
 }
 
+.card-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .card-title {
   font-size: 16px;
   font-weight: 500;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
   line-height: 1.6;
   text-wrap: balance;
   color: var(--color-primary);

@@ -34,9 +34,39 @@ jobs:
             exit 0
           fi
 
+      - name: Download plugin icons
+        run: |
+          mkdir -p public/assets/plugins
+          python3 - <<'EOF'
+          import json, urllib.request, os, time
+          with open('public/plugins.json') as f:
+              data = json.load(f)
+          for plugin in data.get('meta', []):
+              pid = plugin['id']
+              version = list(plugin.get('versions', {}).values())[0] if plugin.get('versions') else None
+              if not version:
+                  continue
+              redirect_path = version.get('redirect_icon_url', '')
+              if not redirect_path:
+                  continue
+              url = f'https://www.figma.com{redirect_path}'
+              out = f'public/assets/plugins/{pid}-icon.png'
+              try:
+                  req = urllib.request.Request(url, headers={
+                      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                      'Referer': 'https://www.figma.com/'
+                  })
+                  with urllib.request.urlopen(req, timeout=10) as r, open(out, 'wb') as fout:
+                      fout.write(r.read())
+                  print(f'Downloaded icon for {pid}')
+                  time.sleep(0.3)
+              except Exception as e:
+                  print(f'Failed {pid}: {e}')
+          EOF
+
       - name: Commit and push if changed
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/plugins.json
+          git add public/plugins.json public/assets/plugins/
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update Figma plugins data" && git push)

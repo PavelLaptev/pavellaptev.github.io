@@ -31,6 +31,7 @@ export type DigestLink = {
   title: string;
   url: string;
   description?: string;
+  image?: string;
 };
 
 export type DigestSection = {

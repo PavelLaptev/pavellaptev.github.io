@@ -42,6 +42,13 @@
                     rel="noopener noreferrer"
                     class="link-card"
                   >
+                    {#if item.image}
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        class="card-image"
+                      />
+                    {/if}
                     <h3 class="card-title">{item.title}</h3>
                     {#if item.description}
                       <p class="card-text">{item.description}</p>
@@ -109,6 +116,15 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     column-gap: 32px;
     row-gap: 16px;
+  }
+
+  .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: block;
   }
 
   @media (max-width: 768px) {

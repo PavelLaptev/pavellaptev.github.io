@@ -127,9 +127,18 @@
         rel="noopener noreferrer"
         class="link-card"
       >
+        {#if pet.image}
+          <img src={pet.image} alt={pet.title} class="card-image" />
+        {/if}
         <h3 class="card-title">{pet.title}</h3>
         <p class="card-text">{pet.text}</p>
       </a>
     {/each}
   </div>
 </section>
+
+<style>
+  .section-grid {
+    row-gap: 40px;
+  }
+</style>

@@ -157,9 +157,50 @@
     margin: 32px 0;
   }
 
+  .article-content :global(table) {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 0 24px;
+    border: 1px solid var(--color-tertiary);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 15px;
+    line-height: 1.5;
+    background: var(--color-background);
+  }
+
+  .article-content :global(th),
+  .article-content :global(td) {
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--color-tertiary);
+  }
+
+  .article-content :global(thead th) {
+    font-weight: 600;
+    background: var(--color-code-bg);
+  }
+
+  .article-content :global(tr > *:not(:last-child)) {
+    border-right: 1px solid var(--color-tertiary);
+  }
+
+  .article-content :global(tbody tr:last-child td) {
+    border-bottom: none;
+  }
+
   @media (max-width: 768px) {
     .page-title {
       font-size: 24px;
+    }
+
+    .article-content :global(table) {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
     }
   }
 </style>

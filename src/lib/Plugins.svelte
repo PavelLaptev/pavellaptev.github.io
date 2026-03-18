@@ -2,6 +2,7 @@
   type Plugin = {
     name: string;
     url: string;
+    iconUrl: string;
     likes: number;
     likesShort: string;
     runs: number;
@@ -24,9 +25,11 @@
         const data = await response.json();
 
         const newPluginData: Plugin[] = data.meta.map((plugin: any) => {
+          const version = Object.values(plugin.versions)[0] as any;
           return {
             url: `https://www.figma.com/community/plugin/${plugin.id}`,
-            name: (Object.values(plugin.versions)[0] as any).name,
+            iconUrl: `/assets/plugins/${plugin.id}-icon.png`,
+            name: version.name,
             likes: plugin.like_count,
             likesShort: toShortNum(plugin.like_count),
             runs: plugin.unique_run_count,
@@ -60,6 +63,11 @@
         rel="noopener noreferrer"
         class="link-card"
       >
+        <img
+          src={plugin.iconUrl}
+          alt="{plugin.name} icon"
+          class="plugin-icon"
+        />
         <h3 class="card-title">{plugin.name}</h3>
         <div class="card-meta">
           <span>{plugin.runsShort} installs</span>
@@ -70,3 +78,13 @@
     {/each}
   </div>
 </section>
+
+<style>
+  .plugin-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    object-fit: cover;
+  }
+</style>
