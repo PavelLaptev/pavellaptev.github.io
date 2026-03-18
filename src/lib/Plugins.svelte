@@ -1,4 +1,6 @@
 <script lang="ts">
+  import pluginsData from "../../public/plugins.json";
+
   type Plugin = {
     name: string;
     url: string;
@@ -8,55 +10,13 @@
     runs: number;
     runsShort: string;
   };
-
-  let plugins = $state<Plugin[]>([]);
-
-  const toShortNum = (n: number): string => {
-    if (n < 1e3) return n.toString();
-    if (n >= 1e3) return (n / 1e3).toFixed(1) + "k";
-    return n.toString();
-  };
-
-  $effect(() => {
-    (async () => {
-      try {
-        // Fetch from static JSON file updated by GitHub Actions
-        const response = await fetch("/plugins.json");
-        const data = await response.json();
-
-        const newPluginData: Plugin[] = data.meta.map((plugin: any) => {
-          const version = Object.values(plugin.versions)[0] as any;
-          return {
-            url: `https://www.figma.com/community/plugin/${plugin.id}`,
-            iconUrl: `/assets/plugins/${plugin.id}-icon.png`,
-            name: version.name,
-            likes: plugin.like_count,
-            likesShort: toShortNum(plugin.like_count),
-            runs: plugin.unique_run_count,
-            runsShort: toShortNum(plugin.unique_run_count)
-          };
-        });
-
-        // Sort by runs
-        const sortedPlugins = newPluginData.sort((a, b) => b.runs - a.runs);
-
-        // Exclude cloned plugins
-        const clonedPlugins = ["1050439261870735490", "1052604096433126717"];
-        plugins = sortedPlugins.filter(
-          (plugin) => !clonedPlugins.includes(plugin.url.split("/").pop() || "")
-        );
-      } catch (error) {
-        console.error("Error fetching plugins:", error);
-      }
-    })();
-  });
 </script>
 
 <section class="section">
   <h2 class="section-title">Figma plugins</h2>
 
   <div class="section-grid">
-    {#each plugins as plugin}
+    {#each pluginsData as plugin}
       <a
         href={plugin.url}
         target="_blank"

@@ -20,12 +20,6 @@ body {
   padding: 40px 20px;
 }
 
-@media (max-width: 768px) {
-  .page {
-    padding: 20px 16px;
-  }
-}
-
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -131,6 +125,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .page {
+    padding: 20px 16px;
+  }
+
   .section {
     margin-bottom: 60px;
   }

@@ -246,6 +246,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="link-card"
+          data-sveltekit-noscroll
         >
           <h3 class="card-title">{article.title}</h3>
           <span class="card-text">{formatDate(article.date)}</span>

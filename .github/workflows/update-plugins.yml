@@ -24,11 +24,11 @@ jobs:
             -H "Referer: https://www.figma.com/" \
             -o /tmp/plugins_response.json
 
-      - name: Validate and update plugins data
+      - name: Validate plugins data and generate minimal plugins.json
         run: |
           if python3 -c "import json; json.load(open('/tmp/plugins_response.json'))" 2>/dev/null; then
-            echo "Valid JSON response, updating plugins.json"
-            cp /tmp/plugins_response.json public/plugins.json
+            echo "Valid JSON response, minifying..."
+            python3 scripts/minify_plugins.py
           else
             echo "::warning::Figma API did not return valid JSON. Skipping update."
             exit 0
@@ -41,15 +41,9 @@ jobs:
           import json, urllib.request, os, time
           with open('public/plugins.json') as f:
               data = json.load(f)
-          for plugin in data.get('meta', []):
-              pid = plugin['id']
-              version = list(plugin.get('versions', {}).values())[0] if plugin.get('versions') else None
-              if not version:
-                  continue
-              redirect_path = version.get('redirect_icon_url', '')
-              if not redirect_path:
-                  continue
-              url = f'https://www.figma.com{redirect_path}'
+          for plugin in data:
+              pid = plugin['url'].split('/')[-1]
+              url = f'https://www.figma.com/community/icon?resource_id={pid}&resource_type=plugin'
               out = f'public/assets/plugins/{pid}-icon.png'
               try:
                   req = urllib.request.Request(url, headers={
