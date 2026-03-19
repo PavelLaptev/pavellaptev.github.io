@@ -11,6 +11,12 @@
 
   const externalArticles: ExternalArticle[] = [
     {
+      title: "The Great CSS Expansion",
+      url: "https://blog.gitbutler.com/the-great-css-expansion",
+      date: "2026-03-19",
+      external: true
+    },
+    {
       title: "But Head: Crafting a Custom Font",
       url: "https://blog.gitbutler.com/but-head-font",
       date: "2026-02-01",
