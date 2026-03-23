@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/pavellaptev/Documents/GitHub/pavellaptev.github.io/**)",
+      "Bash(for pid:*)",
+      "Bash(do echo:*)",
+      "Bash(curl -s \"https://www.figma.com/api/plugins/profile/134689\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" -H \"Accept: application/json\" -H \"Referer: https://www.figma.com/\")",
+      "Bash(curl -sv \"https://www.figma.com/community/icon?resource_id=1500589406434778103&resource_type=plugin\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" -H \"Accept: image/webp,image/png,*/*\" -H \"Referer: https://www.figma.com/community/plugin/1500589406434778103\")",
+      "Bash(curl -s \"https://www.figma.com/community/plugin/1500589406434778103\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\")",
+      "Bash(curl -s \"https://www.figma.com/api/plugins/profile/134689\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" -H \"Accept: application/json\" -H \"Referer: https://www.figma.com/@pavellaptev\")",
+      "Bash(cp e3aaa10d-b5ca-4e51-a622-9526a2688d13-icon.png 1254538877056388290-icon.png)",
+      "Bash(cp 8606ddae-ce68-4243-b634-17776fcd6d64-icon.png 1265414931203814032-icon.png)",
+      "Bash(cp 92d149d0-f3a7-49ea-b697-57818271bef7-icon.png 1500589406434778103-icon.png)",
+      "Bash(cp 7eb640fa-cd8a-443b-93da-5d7607e7643c-icon.jpeg 1557727306689789354-icon.png)",
+      "Bash(cp 5db0375b-e213-4e35-96cc-9a2a905ad5f6-icon.png 953318991680776075-icon.png)"
+    ]
+  }
+}

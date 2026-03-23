@@ -27,6 +27,7 @@
           src={plugin.iconUrl}
           alt="{plugin.name} icon"
           class="plugin-icon"
+          onerror={(e) => ((e.target as HTMLImageElement).style.visibility = 'hidden')}
         />
         <h3 class="card-title">{plugin.name}</h3>
         <div class="card-meta">
