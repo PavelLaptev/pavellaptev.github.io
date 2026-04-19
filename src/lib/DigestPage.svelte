@@ -115,7 +115,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     column-gap: 32px;
-    row-gap: 16px;
+    row-gap: 32px;
   }
 
   .card-image {

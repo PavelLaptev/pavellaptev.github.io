@@ -1,9 +1,9 @@
 {
-  "slug": "2026-02",
-  "number": 1,
-  "title": "Dial Up the Vibes",
-  "date": "2026-02-01",
-  "description": "Design tools, web standards, open source curiosities, and a couple of rabbit holes worth falling into.",
+  "slug": "2026-04",
+  "number": 3,
+  "title": "Keys, Colors, and Curious Cats",
+  "date": "2026-04-01",
+  "description": "Split keyboards and color lore, web platform goodies, a few fresh UI kits, and one very chatty cat.",
   "sections": [
     {
       "title": "Unsorted Links",
@@ -30,7 +30,42 @@
         },
         {
           "title": "",
-          "url": "",
+          "url": "https://addyosmani.com/blog/comprehension-debt/",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://lubeno.dev/blog/reinventing-the-pull-request",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.svgstudio.org/?ref=dailydev",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://spell.sh/",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.kibo-ui.com/",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://kizu.dev/shrinkwrap-solution",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://coryrylan.com/blog/dropdown-menus-with-html-popovers-and-css-anchor-positioning",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://blog.florianschulz.info/2025/10/typeahead",
           "description": ""
         }
       ]
