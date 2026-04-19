@@ -17,4 +17,6 @@
   });
 </script>
 
-<Router {routes} />
+{#key $location}
+  <Router {routes} />
+{/key}
