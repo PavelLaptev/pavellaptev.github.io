@@ -23,8 +23,5 @@
     "js-yaml": "^4.1.1",
     "marked": "^17.0.3",
     "svelte-spa-router": "^4.0.1"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
   }
 }
