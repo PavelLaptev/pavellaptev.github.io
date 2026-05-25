@@ -3,46 +3,46 @@
     "name": "Warp It",
     "url": "https://www.figma.com/community/plugin/923820065156924054",
     "iconUrl": "/assets/plugins/923820065156924054-icon.png",
-    "likes": 3275,
+    "likes": 3289,
     "likesShort": "3.3k",
-    "runs": 261470,
-    "runsShort": "261.5k"
+    "runs": 262634,
+    "runsShort": "262.6k"
   },
   {
     "name": "Image Editor",
     "url": "https://www.figma.com/community/plugin/914972720109480252",
     "iconUrl": "/assets/plugins/914972720109480252-icon.png",
-    "likes": 2364,
+    "likes": 2368,
     "likesShort": "2.4k",
-    "runs": 127812,
-    "runsShort": "127.8k"
+    "runs": 128184,
+    "runsShort": "128.2k"
   },
   {
     "name": "JSON to Figma",
     "url": "https://www.figma.com/community/plugin/789839703871161985",
     "iconUrl": "/assets/plugins/789839703871161985-icon.png",
-    "likes": 923,
-    "likesShort": "923",
-    "runs": 85045,
-    "runsShort": "85.0k"
+    "likes": 924,
+    "likesShort": "924",
+    "runs": 85622,
+    "runsShort": "85.6k"
   },
   {
     "name": "Image Compressor — WEBP, JPG, PNG",
     "url": "https://www.figma.com/community/plugin/1127372261563355491",
     "iconUrl": "/assets/plugins/1127372261563355491-icon.png",
-    "likes": 674,
-    "likesShort": "674",
-    "runs": 68382,
-    "runsShort": "68.4k"
+    "likes": 677,
+    "likesShort": "677",
+    "runs": 68679,
+    "runsShort": "68.7k"
   },
   {
     "name": "HLFTN",
     "url": "https://www.figma.com/community/plugin/1000012087652644703",
     "iconUrl": "/assets/plugins/1000012087652644703-icon.png",
-    "likes": 809,
-    "likesShort": "809",
-    "runs": 43921,
-    "runsShort": "43.9k"
+    "likes": 815,
+    "likesShort": "815",
+    "runs": 44100,
+    "runsShort": "44.1k"
   },
   {
     "name": "Timers",
@@ -50,25 +50,25 @@
     "iconUrl": "/assets/plugins/1053689497185030696-icon.png",
     "likes": 74,
     "likesShort": "74",
-    "runs": 24511,
-    "runsShort": "24.5k"
+    "runs": 24581,
+    "runsShort": "24.6k"
   },
   {
     "name": "DETACH THEM ALL!",
     "url": "https://www.figma.com/community/plugin/952189489892583044",
     "iconUrl": "/assets/plugins/952189489892583044-icon.png",
-    "likes": 343,
-    "likesShort": "343",
-    "runs": 23747,
-    "runsShort": "23.7k"
+    "likes": 344,
+    "likesShort": "344",
+    "runs": 23828,
+    "runsShort": "23.8k"
   },
   {
     "name": "Auto Layout Styles",
     "url": "https://www.figma.com/community/plugin/939173063111899081",
     "iconUrl": "/assets/plugins/939173063111899081-icon.png",
-    "likes": 357,
-    "likesShort": "357",
-    "runs": 14166,
+    "likes": 358,
+    "likesShort": "358",
+    "runs": 14192,
     "runsShort": "14.2k"
   },
   {
@@ -77,16 +77,16 @@
     "iconUrl": "/assets/plugins/891448180042913164-icon.png",
     "likes": 80,
     "likesShort": "80",
-    "runs": 11039,
-    "runsShort": "11.0k"
+    "runs": 11063,
+    "runsShort": "11.1k"
   },
   {
     "name": "Variants Randomizer",
     "url": "https://www.figma.com/community/plugin/981938541965949273",
     "iconUrl": "/assets/plugins/981938541965949273-icon.png",
-    "likes": 210,
-    "likesShort": "210",
-    "runs": 10854,
+    "likes": 211,
+    "likesShort": "211",
+    "runs": 10876,
     "runsShort": "10.9k"
   },
   {
@@ -95,7 +95,7 @@
     "iconUrl": "/assets/plugins/734746297902924375-icon.png",
     "likes": 113,
     "likesShort": "113",
-    "runs": 9401,
+    "runs": 9421,
     "runsShort": "9.4k"
   },
   {
@@ -104,16 +104,16 @@
     "iconUrl": "/assets/plugins/961245776147091630-icon.png",
     "likes": 43,
     "likesShort": "43",
-    "runs": 3911,
+    "runs": 3916,
     "runsShort": "3.9k"
   },
   {
     "name": "TokensBrücke",
     "url": "https://www.figma.com/community/plugin/1254538877056388290",
     "iconUrl": "/assets/plugins/1254538877056388290-icon.png",
-    "likes": 123,
-    "likesShort": "123",
-    "runs": 2115,
+    "likes": 124,
+    "likesShort": "124",
+    "runs": 2143,
     "runsShort": "2.1k"
   },
   {
@@ -122,17 +122,17 @@
     "iconUrl": "/assets/plugins/953318991680776075-icon.png",
     "likes": 56,
     "likesShort": "56",
-    "runs": 2022,
+    "runs": 2023,
     "runsShort": "2.0k"
   },
   {
     "name": "FigClaw",
     "url": "https://www.figma.com/community/plugin/1610744892832367485",
     "iconUrl": "/assets/plugins/1610744892832367485-icon.png",
-    "likes": 158,
-    "likesShort": "158",
-    "runs": 1544,
-    "runsShort": "1.5k"
+    "likes": 170,
+    "likesShort": "170",
+    "runs": 1694,
+    "runsShort": "1.7k"
   },
   {
     "name": "StilTausch ✷ Swap styles with variables",
@@ -140,8 +140,8 @@
     "iconUrl": "/assets/plugins/1265414931203814032-icon.png",
     "likes": 22,
     "likesShort": "22",
-    "runs": 976,
-    "runsShort": "976"
+    "runs": 980,
+    "runsShort": "980"
   },
   {
     "name": "SVG Hell Yeah!",
