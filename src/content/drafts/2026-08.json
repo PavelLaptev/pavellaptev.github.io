@@ -1,0 +1,49 @@
+{
+  "slug": "2026-05",
+  "number": 3,
+  "title": "",
+  "date": "2026-05-01",
+  "description": "",
+  "sections": [
+    {
+      "title": "Unsorted Links",
+      "links": [
+        {
+          "title": "",
+          "url": "https://www.headway.io/blog/the-5-levels-of-an-ai-ready-design-system",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://boneyard.vercel.app/overview",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.evilbuttons.com",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://designsystemdocspec.org",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://jakub.kr",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://studiocool.de",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://help.figma.com/hc/en-us/articles/41306719221143-PropsKit-component-playground",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
