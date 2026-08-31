@@ -3,46 +3,46 @@
     "name": "Warp It",
     "url": "https://www.figma.com/community/plugin/923820065156924054",
     "iconUrl": "/assets/plugins/923820065156924054-icon.png",
-    "likes": 3423,
+    "likes": 3438,
     "likesShort": "3.4k",
-    "runs": 276421,
-    "runsShort": "276.4k"
+    "runs": 277441,
+    "runsShort": "277.4k"
   },
   {
     "name": "Image Editor",
     "url": "https://www.figma.com/community/plugin/914972720109480252",
     "iconUrl": "/assets/plugins/914972720109480252-icon.png",
-    "likes": 2425,
+    "likes": 2433,
     "likesShort": "2.4k",
-    "runs": 132205,
-    "runsShort": "132.2k"
+    "runs": 132497,
+    "runsShort": "132.5k"
   },
   {
     "name": "JSON to Figma",
     "url": "https://www.figma.com/community/plugin/789839703871161985",
     "iconUrl": "/assets/plugins/789839703871161985-icon.png",
-    "likes": 943,
-    "likesShort": "943",
-    "runs": 90187,
-    "runsShort": "90.2k"
+    "likes": 944,
+    "likesShort": "944",
+    "runs": 90418,
+    "runsShort": "90.4k"
   },
   {
     "name": "Image Compressor — WEBP, JPG, PNG",
     "url": "https://www.figma.com/community/plugin/1127372261563355491",
     "iconUrl": "/assets/plugins/1127372261563355491-icon.png",
-    "likes": 707,
-    "likesShort": "707",
-    "runs": 71960,
-    "runsShort": "72.0k"
+    "likes": 709,
+    "likesShort": "709",
+    "runs": 72173,
+    "runsShort": "72.2k"
   },
   {
     "name": "HLFTN",
     "url": "https://www.figma.com/community/plugin/1000012087652644703",
     "iconUrl": "/assets/plugins/1000012087652644703-icon.png",
-    "likes": 868,
-    "likesShort": "868",
-    "runs": 46357,
-    "runsShort": "46.4k"
+    "likes": 874,
+    "likesShort": "874",
+    "runs": 46535,
+    "runsShort": "46.5k"
   },
   {
     "name": "Timers",
@@ -50,17 +50,17 @@
     "iconUrl": "/assets/plugins/1053689497185030696-icon.png",
     "likes": 74,
     "likesShort": "74",
-    "runs": 25334,
-    "runsShort": "25.3k"
+    "runs": 25379,
+    "runsShort": "25.4k"
   },
   {
     "name": "DETACH THEM ALL!",
     "url": "https://www.figma.com/community/plugin/952189489892583044",
     "iconUrl": "/assets/plugins/952189489892583044-icon.png",
-    "likes": 362,
-    "likesShort": "362",
-    "runs": 24728,
-    "runsShort": "24.7k"
+    "likes": 364,
+    "likesShort": "364",
+    "runs": 24792,
+    "runsShort": "24.8k"
   },
   {
     "name": "Auto Layout Styles",
@@ -68,8 +68,8 @@
     "iconUrl": "/assets/plugins/939173063111899081-icon.png",
     "likes": 360,
     "likesShort": "360",
-    "runs": 14440,
-    "runsShort": "14.4k"
+    "runs": 14457,
+    "runsShort": "14.5k"
   },
   {
     "name": "SVG to Image",
@@ -77,16 +77,16 @@
     "iconUrl": "/assets/plugins/891448180042913164-icon.png",
     "likes": 82,
     "likesShort": "82",
-    "runs": 11187,
+    "runs": 11195,
     "runsShort": "11.2k"
   },
   {
     "name": "Variants Randomizer",
     "url": "https://www.figma.com/community/plugin/981938541965949273",
     "iconUrl": "/assets/plugins/981938541965949273-icon.png",
-    "likes": 213,
-    "likesShort": "213",
-    "runs": 11167,
+    "likes": 212,
+    "likesShort": "212",
+    "runs": 11187,
     "runsShort": "11.2k"
   },
   {
@@ -95,7 +95,7 @@
     "iconUrl": "/assets/plugins/734746297902924375-icon.png",
     "likes": 113,
     "likesShort": "113",
-    "runs": 9614,
+    "runs": 9632,
     "runsShort": "9.6k"
   },
   {
@@ -104,7 +104,7 @@
     "iconUrl": "/assets/plugins/961245776147091630-icon.png",
     "likes": 43,
     "likesShort": "43",
-    "runs": 3936,
+    "runs": 3938,
     "runsShort": "3.9k"
   },
   {
@@ -113,7 +113,7 @@
     "iconUrl": "/assets/plugins/1254538877056388290-icon.png",
     "likes": 132,
     "likesShort": "132",
-    "runs": 2361,
+    "runs": 2385,
     "runsShort": "2.4k"
   },
   {
@@ -122,8 +122,8 @@
     "iconUrl": "/assets/plugins/953318991680776075-icon.png",
     "likes": 58,
     "likesShort": "58",
-    "runs": 2050,
-    "runsShort": "2.0k"
+    "runs": 2053,
+    "runsShort": "2.1k"
   },
   {
     "name": "FigClaw",
@@ -131,7 +131,7 @@
     "iconUrl": "/assets/plugins/1610744892832367485-icon.png",
     "likes": 184,
     "likesShort": "184",
-    "runs": 1989,
+    "runs": 1999,
     "runsShort": "2.0k"
   },
   {
@@ -140,7 +140,7 @@
     "iconUrl": "/assets/plugins/1265414931203814032-icon.png",
     "likes": 24,
     "likesShort": "24",
-    "runs": 1016,
+    "runs": 1017,
     "runsShort": "1.0k"
   },
   {
