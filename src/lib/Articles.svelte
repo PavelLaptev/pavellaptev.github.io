@@ -11,6 +11,12 @@
 
   const externalArticles: ExternalArticle[] = [
     {
+      title: "Figma agent vs. one button: shipping design tokens to npm",
+      url: "https://blog.gitbutler.com/design-tokens-ai-agent-vs-button",
+      date: "2026-09-07",
+      external: true
+    },
+    {
       title: "The Great CSS Expansion",
       url: "https://blog.gitbutler.com/the-great-css-expansion",
       date: "2026-03-19",

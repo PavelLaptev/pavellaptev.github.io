@@ -11,6 +11,7 @@
         {
           "title": "",
           "url": "https://www.headway.io/blog/the-5-levels-of-an-ai-ready-design-system",
+          "image": "/assets/digest/2026-08/headway.webp",
           "description": ""
         },
         {
@@ -21,26 +22,61 @@
         {
           "title": "",
           "url": "https://www.evilbuttons.com",
+          "image": "/assets/digest/2026-08/evilbuttons.webp",
           "description": ""
         },
         {
           "title": "",
           "url": "https://designsystemdocspec.org",
+          "image": "/assets/digest/2026-08/designsystemdocspec.webp",
           "description": ""
         },
         {
           "title": "",
           "url": "https://jakub.kr",
+          "image": "/assets/digest/2026-08/jakub.webp",
           "description": ""
         },
         {
           "title": "",
           "url": "https://studiocool.de",
+          "image": "/assets/digest/2026-08/studiocool.webp",
           "description": ""
         },
         {
           "title": "",
           "url": "https://help.figma.com/hc/en-us/articles/41306719221143-PropsKit-component-playground",
+          "image": "/assets/digest/2026-08/propskit.webp",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.chute.fyi",
+          "image": "/assets/digest/2026-08/chute.webp",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://transitions.dev/detail.html?t=menu-dropdown",
+          "image": "/assets/digest/2026-08/transitions.webp",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://16colo.rs/",
+          "image": "/assets/digest/2026-08/16colors.webp",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.minoradventures.co/blog/the-making-of-cursors-icons",
+          "image": "/assets/digest/2026-08/cursors.webp",
+          "description": ""
+        },
+        {
+          "title": "",
+          "url": "https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md?via=dailydev",
+          "image": "/assets/digest/2026-08/vercel.webp",
           "description": ""
         }
       ]
