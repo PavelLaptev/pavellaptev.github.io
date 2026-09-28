@@ -3,72 +3,72 @@
     "name": "Warp It",
     "url": "https://www.figma.com/community/plugin/923820065156924054",
     "iconUrl": "/assets/plugins/923820065156924054-icon.png",
-    "likes": 3476,
+    "likes": 3488,
     "likesShort": "3.5k",
-    "runs": 280814,
-    "runsShort": "280.8k"
+    "runs": 281961,
+    "runsShort": "282.0k"
   },
   {
     "name": "Image Editor",
     "url": "https://www.figma.com/community/plugin/914972720109480252",
     "iconUrl": "/assets/plugins/914972720109480252-icon.png",
-    "likes": 2445,
+    "likes": 2447,
     "likesShort": "2.4k",
-    "runs": 133368,
-    "runsShort": "133.4k"
+    "runs": 133653,
+    "runsShort": "133.7k"
   },
   {
     "name": "JSON to Figma",
     "url": "https://www.figma.com/community/plugin/789839703871161985",
     "iconUrl": "/assets/plugins/789839703871161985-icon.png",
-    "likes": 944,
-    "likesShort": "944",
-    "runs": 91047,
-    "runsShort": "91.0k"
+    "likes": 945,
+    "likesShort": "945",
+    "runs": 91244,
+    "runsShort": "91.2k"
   },
   {
     "name": "Image Compressor — WEBP, JPG, PNG",
     "url": "https://www.figma.com/community/plugin/1127372261563355491",
     "iconUrl": "/assets/plugins/1127372261563355491-icon.png",
-    "likes": 714,
-    "likesShort": "714",
-    "runs": 72873,
-    "runsShort": "72.9k"
+    "likes": 716,
+    "likesShort": "716",
+    "runs": 73084,
+    "runsShort": "73.1k"
   },
   {
     "name": "HLFTN",
     "url": "https://www.figma.com/community/plugin/1000012087652644703",
     "iconUrl": "/assets/plugins/1000012087652644703-icon.png",
-    "likes": 880,
-    "likesShort": "880",
-    "runs": 46988,
-    "runsShort": "47.0k"
+    "likes": 882,
+    "likesShort": "882",
+    "runs": 47089,
+    "runsShort": "47.1k"
   },
   {
     "name": "Timers",
     "url": "https://www.figma.com/community/plugin/1053689497185030696",
     "iconUrl": "/assets/plugins/1053689497185030696-icon.png",
-    "likes": 74,
-    "likesShort": "74",
-    "runs": 25582,
+    "likes": 75,
+    "likesShort": "75",
+    "runs": 25639,
     "runsShort": "25.6k"
   },
   {
     "name": "DETACH THEM ALL!",
     "url": "https://www.figma.com/community/plugin/952189489892583044",
     "iconUrl": "/assets/plugins/952189489892583044-icon.png",
-    "likes": 364,
-    "likesShort": "364",
-    "runs": 24989,
+    "likes": 365,
+    "likesShort": "365",
+    "runs": 25047,
     "runsShort": "25.0k"
   },
   {
     "name": "Auto Layout Styles",
     "url": "https://www.figma.com/community/plugin/939173063111899081",
     "iconUrl": "/assets/plugins/939173063111899081-icon.png",
-    "likes": 362,
-    "likesShort": "362",
-    "runs": 14504,
+    "likes": 363,
+    "likesShort": "363",
+    "runs": 14525,
     "runsShort": "14.5k"
   },
   {
@@ -77,8 +77,8 @@
     "iconUrl": "/assets/plugins/981938541965949273-icon.png",
     "likes": 212,
     "likesShort": "212",
-    "runs": 11243,
-    "runsShort": "11.2k"
+    "runs": 11259,
+    "runsShort": "11.3k"
   },
   {
     "name": "SVG to Image",
@@ -86,7 +86,7 @@
     "iconUrl": "/assets/plugins/891448180042913164-icon.png",
     "likes": 84,
     "likesShort": "84",
-    "runs": 11219,
+    "runs": 11227,
     "runsShort": "11.2k"
   },
   {
@@ -95,7 +95,7 @@
     "iconUrl": "/assets/plugins/734746297902924375-icon.png",
     "likes": 114,
     "likesShort": "114",
-    "runs": 9675,
+    "runs": 9682,
     "runsShort": "9.7k"
   },
   {
@@ -104,17 +104,26 @@
     "iconUrl": "/assets/plugins/961245776147091630-icon.png",
     "likes": 43,
     "likesShort": "43",
-    "runs": 3947,
+    "runs": 3948,
     "runsShort": "3.9k"
   },
   {
     "name": "Tokens Bruecke",
     "url": "https://www.figma.com/community/plugin/1254538877056388290",
     "iconUrl": "/assets/plugins/1254538877056388290-icon.png",
-    "likes": 134,
-    "likesShort": "134",
-    "runs": 2483,
+    "likes": 137,
+    "likesShort": "137",
+    "runs": 2513,
     "runsShort": "2.5k"
+  },
+  {
+    "name": "FigClaw",
+    "url": "https://www.figma.com/community/plugin/1610744892832367485",
+    "iconUrl": "/assets/plugins/1610744892832367485-icon.png",
+    "likes": 186,
+    "likesShort": "186",
+    "runs": 2072,
+    "runsShort": "2.1k"
   },
   {
     "name": "Nicolas Cage Image Replacer",
@@ -122,17 +131,8 @@
     "iconUrl": "/assets/plugins/953318991680776075-icon.png",
     "likes": 58,
     "likesShort": "58",
-    "runs": 2060,
+    "runs": 2063,
     "runsShort": "2.1k"
-  },
-  {
-    "name": "FigClaw",
-    "url": "https://www.figma.com/community/plugin/1610744892832367485",
-    "iconUrl": "/assets/plugins/1610744892832367485-icon.png",
-    "likes": 185,
-    "likesShort": "185",
-    "runs": 2034,
-    "runsShort": "2.0k"
   },
   {
     "name": "StilTausch ✷ Swap styles with variables",
@@ -140,7 +140,7 @@
     "iconUrl": "/assets/plugins/1265414931203814032-icon.png",
     "likes": 24,
     "likesShort": "24",
-    "runs": 1022,
+    "runs": 1023,
     "runsShort": "1.0k"
   },
   {
@@ -158,7 +158,7 @@
     "iconUrl": "/assets/plugins/1557727306689789354-icon.png",
     "likes": 1,
     "likesShort": "1",
-    "runs": 43,
-    "runsShort": "43"
+    "runs": 45,
+    "runsShort": "45"
   }
 ]
